@@ -1,6 +1,17 @@
 [build]
   publish = "src"
 
+# Force /admin to always serve the Decap CMS page (no redirect loop)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/"
+  to = "/admin/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
