@@ -707,7 +707,7 @@
         </a>
         <a href="#" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Mentions légales</a>
         <a href="#" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Confidentialité</a>
-        <a href="admin.html" class="footer-admin-link" title="Administration">·</a>
+        <a href="/admin/" class="footer-admin-link" title="Administration">·</a>
       </div>
     </div>
   </div>
@@ -753,13 +753,14 @@
   </div>
 </div>
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on('init', function(user) {
       if (!user) {
         window.netlifyIdentity.on('login', function() {
-          document.location.href = '/admin/';
+          if (!/^\/admin\/?$/.test(window.location.pathname)) {
+            document.location.href = '/admin/';
+          }
         });
       }
     });
