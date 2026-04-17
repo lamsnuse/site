@@ -2,6 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
+# ── Branding ─────────────────────────────────────────────────
+# Logo shown on the Decap login screen and in the CMS header.
+logo_url: /data/logo_recent.png
+# "View site" link in the CMS top bar.
+display_url: https://lamsn.fr
+site_url: https://lamsn.fr
+
 # Images uploaded via the CMS are saved here
 media_folder: src/data/images
 public_folder: /data/images

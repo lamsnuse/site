@@ -1,13 +1,213 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>LaMSN — Administration</title>
+  <link rel="icon" type="image/png" href="/data/logo_recent.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── LaMSN brand tokens ───────────────────────────────── */
+    :root {
+      --lamsn-navy:    #293358;
+      --lamsn-navy-2:  #354878;
+      --lamsn-blue:    #478ac9;
+      --lamsn-cyan:    #00d4ff;
+      --lamsn-orange:  #ff6b00;
+      --lamsn-bg:      #f4f6fb;
+      --lamsn-ink:     #1a2340;
+      --lamsn-muted:   #6b7590;
+    }
+
+    html, body { margin: 0; padding: 0; height: 100%; font-family: 'Inter', system-ui, sans-serif; background: var(--lamsn-bg); }
+
+    /* ── Boot splash (shown before Decap mounts) ──────────── */
+    #lamsn-boot {
+      position: fixed; inset: 0; z-index: 99999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 28px;
+      background:
+        radial-gradient(ellipse at top, rgba(71,138,201,.25), transparent 60%),
+        radial-gradient(ellipse at bottom, rgba(0,212,255,.15), transparent 60%),
+        linear-gradient(135deg, #1a2340 0%, #293358 55%, #354878 100%);
+      color: #fff;
+      transition: opacity .5s ease, visibility .5s ease;
+    }
+    #lamsn-boot.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    #lamsn-boot .brand {
+      display: flex; align-items: center; gap: 18px;
+      padding: 22px 34px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    #lamsn-boot img { height: 58px; width: auto; filter: brightness(0) invert(1); }
+    #lamsn-boot .title {
+      font-family: 'Merriweather', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    #lamsn-boot .subtitle {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .lamsn-spinner {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.15);
+      border-top-color: var(--lamsn-cyan);
+      animation: lamsn-spin .9s linear infinite;
+    }
+    @keyframes lamsn-spin { to { transform: rotate(360deg); } }
+
+    #lamsn-boot .hint {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ── Decap CMS theming (attribute selectors on emotion classes) ── */
+
+    /* Global canvas */
+    #nc-root, [class*="AppRoot"] { background: var(--lamsn-bg) !important; }
+
+    /* Top bar — makes the Decap header match the main site navy */
+    [class*="AppHeader"] {
+      background: linear-gradient(90deg, var(--lamsn-navy) 0%, var(--lamsn-navy-2) 100%) !important;
+      box-shadow: 0 2px 16px rgba(41,51,88,.22) !important;
+      border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+    }
+    [class*="AppHeader"] a,
+    [class*="AppHeader"] button,
+    [class*="AppHeader"] span,
+    [class*="AppHeader"] [class*="SiteURL"],
+    [class*="AppHeader"] [class*="AppHeader-"] {
+      color: rgba(255,255,255,0.92) !important;
+    }
+    [class*="AppHeader"] [class*="SiteURL"]:hover { color: var(--lamsn-cyan) !important; }
+
+    /* Logo spot in top bar */
+    [class*="AppHeader"] [class*="AppHeader-logo"],
+    [class*="AppHeader"] img { filter: brightness(0) invert(1); }
+
+    /* Primary / action buttons */
+    button[class*="Button"][class*="primary"],
+    [class*="PrimaryButton"],
+    [class*="CardHeading"] + * button[class*="primary"],
+    button[type="submit"] {
+      background: linear-gradient(135deg, var(--lamsn-blue), var(--lamsn-navy-2)) !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 10px !important;
+      box-shadow: 0 2px 10px rgba(71,138,201,.25) !important;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease !important;
+    }
+    button[class*="Button"][class*="primary"]:hover,
+    [class*="PrimaryButton"]:hover,
+    button[type="submit"]:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(71,138,201,.35) !important;
+      filter: brightness(1.05);
+    }
+
+    /* Sidebar / collection list */
+    [class*="SidebarNavList"] a,
+    [class*="Sidebar"] a {
+      border-radius: 8px !important;
+      color: var(--lamsn-ink) !important;
+    }
+    [class*="SidebarNavList"] a[class*="active"],
+    [class*="Sidebar"] a[class*="active"] {
+      background: rgba(71,138,201,.12) !important;
+      color: var(--lamsn-navy) !important;
+      font-weight: 600 !important;
+    }
+
+    /* Card / panel tweaks */
+    [class*="Card"], [class*="Panel"], [class*="FieldsContainer"] {
+      border-radius: 14px !important;
+    }
+
+    /* Links in content */
+    a { color: var(--lamsn-blue); }
+    a:hover { color: var(--lamsn-navy); }
+
+    /* Scrollbar polish (WebKit) */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: rgba(41,51,88,.25); border-radius: 6px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(41,51,88,.45); }
+
+    /* ── Netlify Identity modal — match brand ─────────────── */
+    .netlify-identity-modal,
+    iframe[src*="identity.netlify.com"] { border-radius: 16px !important; }
+
+    /* ── Reduced motion ───────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .lamsn-spinner { animation: none; border-top-color: var(--lamsn-cyan); }
+      #lamsn-boot { transition: none; }
+    }
+  </style>
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+
+  <!-- Branded boot splash — hidden once Decap mounts its UI -->
+  <div id="lamsn-boot" role="status" aria-live="polite" aria-label="Chargement de l'administration LaMSN">
+    <div class="brand">
+      <img src="/data/logo_recent.png" alt="LaMSN" />
+      <div>
+        <div class="title">LaMSN</div>
+        <div class="subtitle">Espace d'administration</div>
+      </div>
+    </div>
+    <div class="lamsn-spinner" aria-hidden="true"></div>
+    <div class="hint">Chargement de l'interface…</div>
+  </div>
+
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Hide the branded boot splash once Decap's UI is mounted.
+    (function () {
+      var splash = document.getElementById('lamsn-boot');
+      if (!splash) return;
+
+      function hide() {
+        splash.classList.add('hidden');
+        setTimeout(function () { splash.remove(); }, 600);
+      }
+
+      // Primary signal: Decap fires a 'preSave'/'login'/'logout' only later — use DOM mutation to detect its root.
+      var observer = new MutationObserver(function () {
+        var mounted = document.querySelector('[class*="AppHeader"], [class*="AuthenticationPage"], #nc-root > div');
+        if (mounted) {
+          observer.disconnect();
+          hide();
+        }
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      // Safety net — force-hide after 6s so splash can't trap the user.
+      setTimeout(function () {
+        observer.disconnect();
+        hide();
+      }, 6000);
+    })();
+  </script>
+
 </body>
 </html>
