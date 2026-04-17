@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — LaMSN</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lamsn-blue-dark':   '#293358',
+            'lamsn-blue-medium': '#354878',
+            'lamsn-blue-light':  '#478ac9',
+            'lamsn-gray-light':  '#f5f5f5',
+            'lamsn-gray-medium': '#666666',
+            'lamsn-gray-dark':   '#333333',
+          },
+          fontFamily: { serif: ['Merriweather', 'serif'] },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white antialiased no-hero">
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<header id="main-header">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="header-logos">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <img src="data/logo_recent.png" alt="LaMSN" class="header-logo-lamsn" />
+          <div class="hidden sm:block">
+            <span class="font-serif font-bold text-lg lg:text-xl nav-text transition-colors">LaMSN</span>
+            <span class="block text-xs nav-text transition-colors opacity-75">La Maison des Sciences Numériques</span>
+          </div>
+        </a>
+        <div class="header-logo-sep hidden sm:block"></div>
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="hidden sm:block">
+          <img src="data/Logo-USPN.png" alt="Université Sorbonne Paris Nord" class="header-logo-uspn" />
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Accueil
+        </a>
+        <a href="a-propos.html" class="nav-text px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">À Propos</a>
+        <a href="formations.html" class="nav-text px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Formations</a>
+        <a href="entreprises.html" class="nav-text px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Entreprises</a>
+        <a href="actualites.html" class="nav-text px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Actualités</a>
+        <a href="contact.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10" style="color:#478ac9;font-weight:600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.26 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Contact
+        </a>
+      </nav>
+      <div class="hidden lg:block">
+        <a href="entreprises.html" class="flex items-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+          Espace Entreprises
+        </a>
+      </div>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md" style="color:#293358" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<div id="mobile-drawer" class="mobile-drawer">
+  <div class="flex items-center justify-between pb-4 border-b mb-4">
+    <div class="flex items-center gap-3">
+      <img src="data/logo_recent.png" alt="LaMSN" class="h-9 w-auto" />
+      <span class="font-serif font-bold text-lamsn-blue-dark">LaMSN</span>
+    </div>
+    <button id="mobile-close-btn" class="p-1.5 rounded-md hover:bg-gray-100 text-lamsn-gray-dark" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="mobile-nav-link">Accueil</a>
+  <a href="a-propos.html" class="mobile-nav-link">À Propos</a>
+  <a href="formations.html" class="mobile-nav-link">Formations</a>
+  <a href="entreprises.html" class="mobile-nav-link">Entreprises</a>
+  <a href="actualites.html" class="mobile-nav-link">Actualités</a>
+  <a href="contact.html" class="mobile-nav-link" style="color:#478ac9;font-weight:600">Contact</a>
+</div>
+
+<main id="main-content">
+
+<!-- Page Hero -->
+<section class="relative py-20 lg:py-28 gradient-lamsn overflow-hidden">
+  <div class="absolute inset-0 hero-grid-overlay"></div>
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-white text-xs font-medium border mb-6" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)">Contactez-nous</span>
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Restons en Contact</h1>
+    <p class="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.82)">
+      Une question ? Un projet ? N'hésitez pas à nous contacter. Notre équipe vous répondra dans les plus brefs délais.
+    </p>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section id="contact" class="py-20 lg:py-32 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Left: info + form -->
+      <div class="space-y-8">
+        <div class="animate-on-scroll delay-300 grid sm:grid-cols-2 gap-4">
+          <div class="bg-white rounded-xl shadow-md p-5">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:rgba(71,138,201,0.1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4 class="font-semibold text-lamsn-blue-dark mb-1">Adresse</h4>
+            <p class="text-sm text-lamsn-gray-medium">20 Avenue George Sand, 93210 Saint-Denis, France</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-5">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:rgba(71,138,201,0.1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.26 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h4 class="font-semibold text-lamsn-blue-dark mb-1">Téléphone</h4>
+            <p class="text-sm text-lamsn-gray-medium">01 55 93 93 93<br/>07 63 99 30 33</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-5">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:rgba(71,138,201,0.1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <h4 class="font-semibold text-lamsn-blue-dark mb-1">Email</h4>
+            <p class="text-sm text-lamsn-gray-medium break-all">celia.agnoli@lamsn.sorbonne-paris-nord.fr</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-5">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style="background:rgba(71,138,201,0.1)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4 class="font-semibold text-lamsn-blue-dark mb-1">Horaires</h4>
+            <p class="text-sm text-lamsn-gray-medium">Lundi - Vendredi<br/>9h00 - 17h00</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll delay-400 bg-white rounded-2xl shadow-lg p-6 lg:p-8">
+          <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark mb-6">Envoyez-nous un message</h3>
+          <form id="contact-form" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-lamsn-blue-dark mb-1.5">Prénom</label>
+                <input id="firstName" type="text" placeholder="Votre prénom" required
+                  class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-lamsn-blue-dark mb-1.5">Nom</label>
+                <input id="lastName" type="text" placeholder="Votre nom" required
+                  class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+              </div>
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-lamsn-blue-dark mb-1.5">Email</label>
+              <input id="email" type="email" placeholder="votre@email.com" required
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+            </div>
+            <div>
+              <label for="subject" class="block text-sm font-medium text-lamsn-blue-dark mb-1.5">Sujet</label>
+              <input id="subject" type="text" placeholder="Objet de votre message" required
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-lamsn-blue-dark mb-1.5">Message</label>
+              <textarea id="message" rows="5" placeholder="Votre message..." required
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full flex items-center justify-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white font-medium py-3 rounded-lg transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Envoyer le message
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right: map + social -->
+      <div class="space-y-8">
+        <div class="animate-on-scroll delay-400 bg-white rounded-2xl shadow-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.5166254317186!2d2.362999315675!3d48.907874179292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc0962612f7%3A0xb2dfe858aa438222!2s20%20Av.%20George%20Sand%2C%2093210%20Saint-Denis!5e0!3m2!1sfr!2sfr!4v1706697742101!5m2!1sfr!2sfr"
+            width="100%" height="400" style="border:0;display:block"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation LaMSN">
+          </iframe>
+        </div>
+
+        <div class="animate-on-scroll delay-500 bg-white rounded-xl shadow-md p-6">
+          <h4 class="font-semibold text-lamsn-blue-dark mb-4">Ressources</h4>
+          <div class="space-y-3">
+            <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-lamsn-gray-light transition-colors group">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="font-medium text-lamsn-blue-dark text-sm">Charte Graphique</p>
+                <p class="text-xs text-lamsn-gray-medium">Logos et identité visuelle</p>
+              </div>
+            </a>
+            <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg hover:bg-lamsn-gray-light transition-colors group">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+              </div>
+              <div>
+                <p class="font-medium text-lamsn-blue-dark text-sm">Université Sorbonne Paris Nord</p>
+                <p class="text-xs text-lamsn-gray-medium">Site institutionnel</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll delay-500 bg-white rounded-xl shadow-md p-6">
+          <h4 class="font-semibold text-lamsn-blue-dark mb-4">Suivez-nous</h4>
+          <div class="flex gap-3">
+            <a href="#" title="LinkedIn" class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity" style="background:#0077b5">in</a>
+            <a href="#" title="Bluesky"  class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity" style="background:#0085ff">B</a>
+            <a href="#" title="Facebook" class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity" style="background:#1877f2">f</a>
+            <a href="#" title="Instagram" class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity" style="background:linear-gradient(135deg,#f9a825,#e53935,#8e24aa)">ig</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-lamsn-blue-dark text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="data/logo_recent.png" alt="LaMSN" class="h-10 w-auto" style="filter:brightness(0) invert(1)" />
+        <div>
+          <span class="font-serif font-bold text-lg">LaMSN</span>
+          <span class="block text-xs" style="color:rgba(255,255,255,0.55)">La Maison des Sciences Numériques</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-6 text-sm" style="color:rgba(255,255,255,0.65)">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a>
+        <a href="formations.html" class="hover:text-white transition-colors">Formations</a>
+        <a href="entreprises.html" class="hover:text-white transition-colors">Entreprises</a>
+        <a href="actualites.html" class="hover:text-white transition-colors">Actualités</a>
+      </div>
+    </div>
+    <div class="border-t mt-8 pt-6 flex items-center justify-between text-sm" style="border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.45)">
+      <span>&copy; <span id="copyright-year"></span> LaMSN — Université Sorbonne Paris Nord. Tous droits réservés.</span>
+      <a href="/admin/" class="footer-admin-link" title="Administration">·</a>
+    </div>
+  </div>
+</footer>
+
+<button id="chatbot-toggle" aria-label="Ouvrir le chat">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div id="chatbot-window">
+  <div class="flex items-center justify-between p-4 gradient-lamsn">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.2)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+      </div>
+      <div><h3 class="font-semibold text-white text-sm">Assistant LaMSN</h3><p class="text-xs" style="color:rgba(255,255,255,0.7)">En ligne</p></div>
+    </div>
+    <button id="chatbot-close" class="p-1.5 rounded-lg hover:bg-white/20 text-white" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div id="chatbot-messages"></div>
+  <div class="p-4 border-t bg-white">
+    <div class="flex gap-2">
+      <input id="chatbot-input" type="text" placeholder="Posez votre question..." class="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+      <button id="chatbot-send" class="bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white p-2 rounded-lg" aria-label="Envoyer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

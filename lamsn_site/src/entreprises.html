@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entreprises — LaMSN</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lamsn-blue-dark':   '#293358',
+            'lamsn-blue-medium': '#354878',
+            'lamsn-blue-light':  '#478ac9',
+            'lamsn-gray-light':  '#f5f5f5',
+            'lamsn-gray-medium': '#666666',
+            'lamsn-gray-dark':   '#333333',
+          },
+          fontFamily: { serif: ['Merriweather', 'serif'] },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white antialiased no-hero">
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════ -->
+<header id="main-header">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <div class="header-logos">
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <img src="data/logo_recent.png" alt="LaMSN" class="header-logo-lamsn" />
+          <div class="hidden sm:block">
+            <span class="font-serif font-bold text-lg lg:text-xl nav-text transition-colors">LaMSN</span>
+            <span class="block text-xs nav-text transition-colors opacity-75">La Maison des Sciences Numériques</span>
+          </div>
+        </a>
+        <div class="header-logo-sep hidden sm:block"></div>
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="hidden sm:block" title="Université Sorbonne Paris Nord">
+          <img src="data/Logo-USPN.png" alt="Université Sorbonne Paris Nord" class="header-logo-uspn" />
+        </a>
+      </div>
+
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Accueil
+        </a>
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            À Propos
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="a-propos.html#mission"><span class="dd-title">Mission &amp; Vision</span><span class="dd-desc">Notre raison d'être</span></a>
+            <a href="a-propos.html#transformation"><span class="dd-title">Transformation Numérique</span><span class="dd-desc">Notre approche</span></a>
+            <a href="a-propos.html#objectifs"><span class="dd-title">Nos Objectifs</span><span class="dd-desc">Les ambitions de LaMSN</span></a>
+            <a href="a-propos.html#gouvernance"><span class="dd-title">Gouvernance</span><span class="dd-desc">Notre structure</span></a>
+          </div>
+        </div>
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            Excellence
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="a-propos.html#ethique"><span class="dd-dot" style="background:#00a8e8"></span><span class="dd-title">Confiance &amp; Éthique</span></a>
+            <a href="a-propos.html#sante"><span class="dd-dot" style="background:#e63946"></span><span class="dd-title">Santé &amp; Numérique</span></a>
+            <a href="a-propos.html#cybersecurite"><span class="dd-dot" style="background:#2a9d8f"></span><span class="dd-title">Cybersécurité</span></a>
+            <a href="a-propos.html#arts"><span class="dd-dot" style="background:#f4a261"></span><span class="dd-title">Arts Numériques</span></a>
+            <a href="a-propos.html#fintech"><span class="dd-dot" style="background:#e9c46a"></span><span class="dd-title">FinTechs &amp; Énergie</span></a>
+            <a href="a-propos.html#humanities"><span class="dd-dot" style="background:#9b5de5"></span><span class="dd-title">e-Humanities</span></a>
+            <a href="a-propos.html#cynotechnie"><span class="dd-dot" style="background:#f15bb5"></span><span class="dd-title">Cynotechnie</span></a>
+          </div>
+        </div>
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Formations
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown single">
+            <a href="formations.html#catalogue"><span class="dd-title">Catalogue des Formations</span><span class="dd-desc">Découvrez nos 30+ formations</span></a>
+            <a href="formations.html#en-ligne"><span class="dd-title">Formations en Ligne</span><span class="dd-desc">Apprentissage à distance 24/7</span></a>
+          </div>
+        </div>
+        <a href="entreprises.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10" style="color:#478ac9;font-weight:600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+          Entreprises
+        </a>
+        <a href="actualites.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/></svg>
+          Actualités
+        </a>
+        <a href="contact.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12"/></svg>
+          Contact
+        </a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="contact.html"
+          class="flex items-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+          Nous contacter
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md transition-colors" style="color:#293358" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<div id="mobile-drawer" class="mobile-drawer">
+  <div class="flex items-center justify-between pb-4 border-b mb-4">
+    <div class="flex items-center gap-3">
+      <img src="data/logo_recent.png" alt="LaMSN" class="h-9 w-auto object-contain" />
+      <div>
+        <span class="font-serif font-bold text-lamsn-blue-dark">LaMSN</span>
+        <span class="block text-xs text-lamsn-gray-medium">La Maison des Sciences Numériques</span>
+      </div>
+    </div>
+    <button id="mobile-close-btn" class="p-1.5 rounded-md hover:bg-gray-100 transition-colors text-lamsn-gray-dark" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Accueil
+  </a>
+  <button class="mobile-accordion-btn">
+    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>À Propos</span>
+    <svg class="mobile-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-accordion-body">
+    <a href="a-propos.html#mission" class="mobile-sub-link">Mission &amp; Vision</a>
+    <a href="a-propos.html#transformation" class="mobile-sub-link">Transformation Numérique</a>
+    <a href="a-propos.html#objectifs" class="mobile-sub-link">Nos Objectifs</a>
+    <a href="a-propos.html#gouvernance" class="mobile-sub-link">Gouvernance</a>
+  </div>
+  <button class="mobile-accordion-btn">
+    <span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formations</span>
+    <svg class="mobile-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-accordion-body">
+    <a href="formations.html#catalogue" class="mobile-sub-link">Catalogue des Formations</a>
+    <a href="formations.html#en-ligne" class="mobile-sub-link">Formations en Ligne</a>
+  </div>
+  <a href="entreprises.html" class="mobile-nav-link" style="color:#478ac9">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/></svg>
+    Entreprises
+  </a>
+  <a href="actualites.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Z"/></svg>
+    Actualités
+  </a>
+  <a href="contact.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12"/></svg>
+    Contact
+  </a>
+  <div class="pt-4 border-t mt-2">
+    <a href="contact.html" class="w-full flex items-center justify-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
+      Nous contacter
+    </a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT
+     ══════════════════════════════════════════════════════════ -->
+<main id="main-content">
+
+<!-- Page Hero -->
+<section class="relative py-20 lg:py-28 gradient-lamsn overflow-hidden">
+  <div class="absolute inset-0 hero-grid-overlay"></div>
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-white text-xs font-medium border mb-6"
+          style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)">
+      Espace Entreprises
+    </span>
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+      Collaborer avec LaMSN
+    </h1>
+    <p class="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.82)">
+      Que vous soyez une start-up innovante ou un grand groupe, découvrez comment nos équipes
+      peuvent accompagner vos projets numériques et enrichir votre écosystème.
+    </p>
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 1 — TYPES DE PARTENARIATS
+     ────────────────────────────────────────────────────────── -->
+<section id="partenariats" class="py-20 lg:py-28 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="animate-on-scroll inline-block text-lamsn-blue-light font-semibold text-sm uppercase tracking-wider mb-4">Types de Collaboration</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Nos Modes de Partenariat</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium leading-relaxed">
+        Recherche collaborative, recrutement ou partenariat stratégique : choisissez la formule qui correspond à vos ambitions.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+
+      <div class="animate-on-scroll delay-300">
+        <div class="h-full bg-white rounded-2xl shadow-lg p-6 lg:p-8 card-hover border border-gray-100">
+          <div class="w-14 h-14 rounded-xl gradient-lamsn flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark mb-3">Recherche Collaborative</h3>
+          <p class="text-lamsn-gray-medium leading-relaxed mb-6">Participez à nos projets de recherche et bénéficiez de l'expertise de nos équipes sur vos défis technologiques.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Accès aux laboratoires de recherche</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Collaboration avec des experts</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Publication scientifique conjointe</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Propriété intellectuelle partagée</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll delay-400">
+        <div class="h-full bg-white rounded-2xl shadow-lg p-6 lg:p-8 card-hover border border-gray-100">
+          <div class="w-14 h-14 rounded-xl gradient-lamsn flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark mb-3">Recrutement &amp; Stages</h3>
+          <p class="text-lamsn-gray-medium leading-relaxed mb-6">Accédez à notre vivier de talents formés aux dernières technologies et méthodologies du numérique.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Stage de fin d'études</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Apprentissage en alternance</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Recrutement de jeunes diplômés</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Formation continue sur mesure</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="animate-on-scroll delay-500">
+        <div class="h-full bg-white rounded-2xl shadow-lg p-6 lg:p-8 card-hover border border-gray-100">
+          <div class="w-14 h-14 rounded-xl gradient-lamsn flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-1"/><path d="M4.72 4.72C3.56 7.77 4.83 11 8 12"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark mb-3">Partenariat Stratégique</h3>
+          <p class="text-lamsn-gray-medium leading-relaxed mb-6">Établissez un partenariat durable avec LaMSN pour co-construire l'avenir du numérique.</p>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Chaire industrielle</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Laboratoire commun</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Bourse de recherche</li>
+            <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Événements communautaires</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 2 — TARIFS
+     ────────────────────────────────────────────────────────── -->
+<section id="tarifs" class="py-20 lg:py-28 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="animate-on-scroll inline-block text-lamsn-blue-light font-semibold text-sm uppercase tracking-wider mb-4">Nos Offres</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Tarifs &amp; Abonnements</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium leading-relaxed">
+        Trois formules d'accès au tiers-lieu LaMSN — adaptées à tous les profils d'entreprise.
+      </p>
+    </div>
+
+    <!-- ── Catégorie 1 : Abonnement Annuel ── -->
+    <div class="animate-on-scroll delay-200 mb-12">
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="px-6 pt-6 pb-4 border-b border-gray-100">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg gradient-lamsn flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark">Catégorie 1 — Abonnement Annuel</h3>
+              <p class="text-sm text-lamsn-gray-medium">Accès progressif aux services selon le niveau choisi. Accès exclusif aux EC conseils et aux étudiants.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-table-wrapper p-4">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th style="width:30%">Type d'organisation</th>
+                <th class="th-gold">
+                  <div class="flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Gold
+                  </div>
+                </th>
+                <th class="th-silver">
+                  <div class="flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Silver
+                  </div>
+                </th>
+                <th class="th-bronze">
+                  <div class="flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Bronze
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Grands groupes</td>
+                <td><span class="price-gold">100 000 €</span></td>
+                <td><span class="price-silver">70 000 €</span></td>
+                <td><span class="price-bronze">30 000 €</span></td>
+              </tr>
+              <tr>
+                <td>ETI</td>
+                <td><span class="price-gold">50 000 €</span></td>
+                <td><span class="price-silver">30 000 €</span></td>
+                <td><span class="price-bronze">15 000 €</span></td>
+              </tr>
+              <tr>
+                <td>PME</td>
+                <td><span class="price-gold">25 000 €</span></td>
+                <td><span class="price-silver">17 000 €</span></td>
+                <td><span class="price-bronze">10 000 €</span></td>
+              </tr>
+              <tr>
+                <td>Start-ups</td>
+                <td><span class="price-gold">10 000 €</span></td>
+                <td><span class="price-silver">7 000 €</span></td>
+                <td><span class="price-bronze">5 000 €</span></td>
+              </tr>
+              <tr>
+                <td>Acteurs publics</td>
+                <td><span class="font-semibold text-green-600">Gratuit</span></td>
+                <td><span class="font-semibold text-green-600">Gratuit</span></td>
+                <td><span class="font-semibold text-green-600">Gratuit</span></td>
+              </tr>
+              <tr>
+                <td>Partenaires technologiques</td>
+                <td><span class="price-gold">1 000 €</span></td>
+                <td><span class="price-silver">1 000 €</span></td>
+                <td><span class="price-bronze">1 000 €</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="px-6 py-4 bg-lamsn-gray-light border-t border-gray-100">
+          <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-lamsn-gray-medium">
+            <span class="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              Accès progressif aux services selon le niveau (Gold &gt; Silver &gt; Bronze)
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Accès exclusif aux EC conseils et aux étudiants
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Catégories 2 & 3 côte à côte ── -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Catégorie 2 : Mensuel -->
+      <div class="animate-on-scroll delay-300">
+        <div class="h-full bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+          <div class="px-6 pt-6 pb-4 border-b border-gray-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg gradient-lamsn flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark">Catégorie 2 — Abonnement Mensuel</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1">
+            <div class="text-center mb-6">
+              <span class="text-4xl font-serif font-bold text-lamsn-blue-dark">5 000 €</span>
+              <span class="text-lamsn-gray-medium text-sm"> / mois</span>
+            </div>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Accès coworking + rangement + internet
+              </li>
+              <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Thé &amp; café inclus
+              </li>
+              <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Accès aux espaces équipés (salles de réunion, labo)
+              </li>
+              <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Participation aux événements (conférences, colloques)
+              </li>
+              <li class="flex items-start gap-3 text-sm text-lamsn-gray-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Networking avec l'écosystème LaMSN
+              </li>
+            </ul>
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800">
+              <strong>Conditions :</strong> Engagement minimum 3 mois · Préavis 1 mois
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="contact.html"
+              class="w-full flex items-center justify-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white font-medium py-3 rounded-lg transition-colors">
+              Souscrire à cet abonnement
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catégorie 3 : À l'Usage -->
+      <div class="animate-on-scroll delay-400">
+        <div class="h-full bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+          <div class="px-6 pt-6 pb-4 border-b border-gray-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg gradient-lamsn flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark">Catégorie 3 — Facturation à l'Usage</h3>
+            </div>
+          </div>
+          <div class="p-6 flex-1">
+            <p class="text-sm text-lamsn-gray-medium mb-6">Accès ponctuel, sans engagement — idéal pour les besoins occasionnels.</p>
+            <div class="space-y-4">
+              <!-- Usage row 1 -->
+              <div class="flex items-center justify-between p-4 bg-lamsn-gray-light rounded-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-lamsn-blue-dark text-sm">Coworking + Prestations</p>
+                    <p class="text-xs text-lamsn-gray-medium">Espace de travail partagé, services inclus</p>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0 ml-4">
+                  <span class="text-xl font-serif font-bold text-lamsn-blue-dark">250 €</span>
+                  <span class="text-xs text-lamsn-gray-medium block">/ jour</span>
+                </div>
+              </div>
+              <!-- Usage row 2 -->
+              <div class="flex items-center justify-between p-4 bg-lamsn-gray-light rounded-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M12 8V4"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-lamsn-blue-dark text-sm">Accès Plateforme Technologique</p>
+                    <p class="text-xs text-lamsn-gray-medium">Laboratoires, équipements spécialisés</p>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0 ml-4">
+                  <span class="text-xl font-serif font-bold text-lamsn-blue-dark">2 000 €</span>
+                  <span class="text-xs text-lamsn-gray-medium block">/ jour</span>
+                </div>
+              </div>
+              <!-- Usage row 3 -->
+              <div class="flex items-center justify-between p-4 bg-lamsn-gray-light rounded-xl">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-lamsn-blue-dark text-sm">Mobilier / Espaces spécifiques</p>
+                    <p class="text-xs text-lamsn-gray-medium">Salles de conférence, espaces événementiels</p>
+                  </div>
+                </div>
+                <div class="text-right flex-shrink-0 ml-4">
+                  <span class="text-xl font-serif font-bold text-lamsn-blue-dark">500 €</span>
+                  <span class="text-xs text-lamsn-gray-medium block">/ jour</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6">
+            <a href="contact.html"
+              class="w-full flex items-center justify-center gap-2 border border-lamsn-blue-light text-lamsn-blue-light hover:bg-lamsn-blue-light hover:text-white font-medium py-3 rounded-lg transition-colors">
+              Réserver un espace
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 3 — SERVICES
+     ────────────────────────────────────────────────────────── -->
+<section id="services" class="py-20 lg:py-28 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="animate-on-scroll bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-100">
+      <h3 class="font-serif text-2xl font-bold text-lamsn-blue-dark mb-8 text-center">Nos Services aux Entreprises</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-4 rounded-xl hover:bg-lamsn-gray-light transition-colors">
+          <div class="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          </div>
+          <h4 class="font-semibold text-lamsn-blue-dark mb-2">Expertise Technique</h4>
+          <p class="text-sm text-lamsn-gray-medium">Accès à notre expertise sur les technologies émergentes</p>
+        </div>
+        <div class="text-center p-4 rounded-xl hover:bg-lamsn-gray-light transition-colors">
+          <div class="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h4 class="font-semibold text-lamsn-blue-dark mb-2">Formation Sur Mesure</h4>
+          <p class="text-sm text-lamsn-gray-medium">Programmes adaptés à vos besoins spécifiques</p>
+        </div>
+        <div class="text-center p-4 rounded-xl hover:bg-lamsn-gray-light transition-colors">
+          <div class="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h4 class="font-semibold text-lamsn-blue-dark mb-2">Prestations de Service</h4>
+          <p class="text-sm text-lamsn-gray-medium">Réalisation d'études et de développements sur mesure</p>
+        </div>
+        <div class="text-center p-4 rounded-xl hover:bg-lamsn-gray-light transition-colors">
+          <div class="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(71,138,201,0.1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M12 8V4"/></svg>
+          </div>
+          <h4 class="font-semibold text-lamsn-blue-dark mb-2">Accès aux Infrastructures</h4>
+          <p class="text-sm text-lamsn-gray-medium">Plateformes technologiques et équipements de pointe</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── Nos Partenaires (CMS) ── -->
+<section id="partenaires" class="py-20 lg:py-28 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="animate-on-scroll inline-block text-lamsn-blue-light font-semibold text-sm uppercase tracking-wider mb-4">Ils nous font confiance</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl font-bold text-lamsn-blue-dark mb-4">Nos Partenaires</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium">
+        Entreprises, institutions et organismes qui collaborent avec LaMSN.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6" id="cms-partners-grid">
+      <!-- Populated by cms.js -->
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA Contact -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="animate-on-scroll relative gradient-lamsn rounded-2xl p-8 lg:p-12 overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 rounded-full -translate-y-1/2 translate-x-1/2" style="background:rgba(255,255,255,0.05)"></div>
+      <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="text-center lg:text-left">
+          <h3 class="font-serif text-2xl lg:text-3xl font-bold text-white mb-3">Prêt à collaborer ?</h3>
+          <p style="color:rgba(255,255,255,0.8)" class="max-w-2xl mb-4">Notre équipe dédiée aux relations entreprises est à votre écoute pour étudier vos besoins et construire ensemble un partenariat sur mesure.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <span class="flex items-center gap-2 text-sm" style="color:rgba(255,255,255,0.8)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              partenariats@lamsn.fr
+            </span>
+            <span class="flex items-center gap-2 text-sm" style="color:rgba(255,255,255,0.8)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12"/></svg>
+              01 55 93 93 93
+            </span>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+          <a href="contact.html" class="flex items-center gap-2 bg-white text-lamsn-blue-dark hover:bg-white/90 font-semibold px-6 py-3 rounded-lg transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            Contacter un expert
+          </a>
+          <button class="flex items-center gap-2 border font-semibold px-6 py-3 rounded-lg transition-colors text-white hover:bg-white/10" style="border-color:rgba(255,255,255,0.3)">
+            Télécharger la plaquette
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer class="bg-lamsn-blue-dark text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12">
+      <div class="col-span-2 md:col-span-3 lg:col-span-2">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="data/logo_recent.png" alt="LaMSN" class="h-10 w-auto object-contain" style="filter:brightness(0) invert(1)" />
+          <div>
+            <span class="font-serif font-bold text-xl">LaMSN</span>
+            <span class="block text-xs" style="color:rgba(255,255,255,0.55)">La Maison des Sciences Numériques</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed mb-4 max-w-sm" style="color:rgba(255,255,255,0.65)">
+          Institut Fédératif de Recherche Interdisciplinaire de l'Université Sorbonne Paris Nord.
+        </p>
+        <div class="space-y-2 text-sm" style="color:rgba(255,255,255,0.65)">
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>20 Avenue George Sand, 93210 Saint-Denis</div>
+          <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>01 55 93 93 93</div>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">À Propos</h4>
+        <ul class="space-y-2">
+          <li><a href="a-propos.html#mission" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Mission &amp; Vision</a></li>
+          <li><a href="a-propos.html#gouvernance" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Gouvernance</a></li>
+          <li><a href="a-propos.html#excellence" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Excellence</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Formations</h4>
+        <ul class="space-y-2">
+          <li><a href="formations.html#catalogue" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Catalogue</a></li>
+          <li><a href="formations.html#en-ligne" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">En ligne</a></li>
+        </ul>
+        <h4 class="font-semibold text-white mt-6 mb-4 text-sm uppercase tracking-wider">Entreprises</h4>
+        <ul class="space-y-2">
+          <li><a href="entreprises.html#tarifs" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Tarifs</a></li>
+          <li><a href="entreprises.html#partenariats" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Partenariats</a></li>
+          <li><a href="contact.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Actualités</h4>
+        <ul class="space-y-2">
+          <li><a href="actualites.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Dernières nouvelles</a></li>
+          <li><a href="actualites.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Événements</a></li>
+          <li><a href="contact.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="border-t" style="border-color:rgba(255,255,255,0.1)">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm" style="color:rgba(255,255,255,0.55)">&copy; <span id="copyright-year"></span> LaMSN — Université Sorbonne Paris Nord. Tous droits réservés.</p>
+      <div class="flex items-center gap-6">
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Université Sorbonne Paris Nord</a>
+        <a href="#" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Mentions légales</a>
+        <a href="/admin/" class="footer-admin-link" title="Administration">·</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CHATBOT -->
+<button id="chatbot-toggle" aria-label="Ouvrir le chat">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div id="chatbot-window">
+  <div class="flex items-center justify-between p-4 gradient-lamsn">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.2)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white text-sm">Assistant LaMSN</h3>
+        <p class="text-xs flex items-center gap-1" style="color:rgba(255,255,255,0.7)"><span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>En ligne</p>
+      </div>
+    </div>
+    <button id="chatbot-close" class="p-1.5 rounded-lg hover:bg-white/20 transition-colors text-white" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div id="chatbot-messages"></div>
+  <div class="p-4 border-t bg-white">
+    <div class="flex gap-2">
+      <input id="chatbot-input" type="text" placeholder="Posez votre question..."
+        class="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+      <button id="chatbot-send" class="bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white p-2 rounded-lg transition-colors" aria-label="Envoyer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+    <p class="text-xs text-center mt-2" style="color:#999">Appuyez sur Entrée pour envoyer</p>
+  </div>
+</div>
+
+<script src="cms.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

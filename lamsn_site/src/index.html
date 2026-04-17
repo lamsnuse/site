@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaMSN — La Maison des Sciences Numériques</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lamsn-blue-dark':   '#293358',
+            'lamsn-blue-medium': '#354878',
+            'lamsn-blue-light':  '#478ac9',
+            'lamsn-gray-light':  '#f5f5f5',
+            'lamsn-gray-medium': '#666666',
+            'lamsn-gray-dark':   '#333333',
+          },
+          fontFamily: { serif: ['Merriweather', 'serif'] },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white antialiased">
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════ -->
+<header id="main-header">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+
+      <!-- Logos — images only, no text labels -->
+      <div class="header-logos">
+        <a href="index.html" title="LaMSN — Accueil">
+          <img src="data/logo_recent.png" alt="LaMSN" class="header-logo-lamsn" />
+        </a>
+        <div class="header-logo-sep hidden sm:block"></div>
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="hidden sm:block" title="Université Sorbonne Paris Nord">
+          <img src="data/Logo-USPN.png" alt="Université Sorbonne Paris Nord" class="header-logo-uspn" />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1">
+
+        <a href="index.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Accueil
+        </a>
+
+        <!-- À Propos dropdown -->
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            À Propos
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="a-propos.html#mission"><span class="dd-title">Mission &amp; Vision</span><span class="dd-desc">Notre raison d'être et nos ambitions</span></a>
+            <a href="a-propos.html#transformation"><span class="dd-title">Transformation Numérique</span><span class="dd-desc">Notre approche du numérique</span></a>
+            <a href="a-propos.html#objectifs"><span class="dd-title">Nos Objectifs</span><span class="dd-desc">Les ambitions de LaMSN</span></a>
+            <a href="a-propos.html#strategie"><span class="dd-title">Notre Stratégie</span><span class="dd-desc">Notre feuille de route</span></a>
+            <a href="a-propos.html#gouvernance"><span class="dd-title">Gouvernance</span><span class="dd-desc">Notre structure organisationnelle</span></a>
+            <a href="a-propos.html#membres"><span class="dd-title">Nos Membres</span><span class="dd-desc">Notre équipe et partenaires</span></a>
+          </div>
+        </div>
+
+        <!-- Excellence dropdown -->
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            Excellence
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="a-propos.html#ethique"><span class="dd-dot" style="background:#00a8e8"></span><span class="dd-title">Confiance &amp; Éthique Numériques</span><span class="dd-desc">Sécurité et éthique du numérique</span></a>
+            <a href="a-propos.html#sante"><span class="dd-dot" style="background:#e63946"></span><span class="dd-title">Santé &amp; Numérique</span><span class="dd-desc">Innovation en e-santé</span></a>
+            <a href="a-propos.html#cybersecurite"><span class="dd-dot" style="background:#2a9d8f"></span><span class="dd-title">Cybersécurité</span><span class="dd-desc">Protection des systèmes</span></a>
+            <a href="a-propos.html#arts"><span class="dd-dot" style="background:#f4a261"></span><span class="dd-title">Arts Numériques</span><span class="dd-desc">Création assistée par ordinateur</span></a>
+            <a href="a-propos.html#fintech"><span class="dd-dot" style="background:#e9c46a"></span><span class="dd-title">FinTechs &amp; Énergie</span><span class="dd-desc">Finance durable et innovation</span></a>
+            <a href="a-propos.html#humanities"><span class="dd-dot" style="background:#9b5de5"></span><span class="dd-title">e-Humanities</span><span class="dd-desc">Sciences humaines numériques</span></a>
+            <a href="a-propos.html#cynotechnie"><span class="dd-dot" style="background:#f15bb5"></span><span class="dd-title">Cynotechnie &amp; Innovation</span><span class="dd-desc">Technologies d'assistance</span></a>
+          </div>
+        </div>
+
+        <!-- Formations dropdown -->
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Formations
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown single">
+            <a href="formations.html#catalogue"><span class="dd-title">Catalogue des Formations</span><span class="dd-desc">Découvrez nos 30+ formations</span></a>
+            <a href="formations.html#en-ligne"><span class="dd-title">Formations en Ligne</span><span class="dd-desc">Apprentissage à distance 24/7</span></a>
+          </div>
+        </div>
+
+        <a href="entreprises.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+          Entreprises
+        </a>
+        <a href="actualites.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+          Actualités
+        </a>
+        <a href="videos.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Vidéos
+        </a>
+        <a href="contact.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.26 2 2 0 0 1 3.9 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Contact
+        </a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="formations.html"
+          class="flex items-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Nos Formations
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md transition-colors" style="color:white" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     MOBILE DRAWER
+     ══════════════════════════════════════════════════════════ -->
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<div id="mobile-drawer" class="mobile-drawer">
+  <div class="flex items-center justify-between pb-4 border-b mb-4">
+    <div class="flex items-center gap-3">
+      <img src="data/logo_recent.png" alt="LaMSN" class="h-9 w-auto object-contain" />
+      <div>
+        <span class="font-serif font-bold text-lamsn-blue-dark">LaMSN</span>
+        <span class="block text-xs text-lamsn-gray-medium">La Maison des Sciences Numériques</span>
+      </div>
+    </div>
+    <button id="mobile-close-btn" class="p-1.5 rounded-md hover:bg-gray-100 transition-colors text-lamsn-gray-dark" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
+  <a href="index.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Accueil
+  </a>
+
+  <button class="mobile-accordion-btn">
+    <span class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+      À Propos
+    </span>
+    <svg class="mobile-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-accordion-body">
+    <a href="a-propos.html#mission" class="mobile-sub-link">Mission &amp; Vision</a>
+    <a href="a-propos.html#transformation" class="mobile-sub-link">Transformation Numérique</a>
+    <a href="a-propos.html#objectifs" class="mobile-sub-link">Nos Objectifs</a>
+    <a href="a-propos.html#strategie" class="mobile-sub-link">Notre Stratégie</a>
+    <a href="a-propos.html#gouvernance" class="mobile-sub-link">Gouvernance</a>
+    <a href="a-propos.html#membres" class="mobile-sub-link">Nos Membres</a>
+  </div>
+
+  <button class="mobile-accordion-btn">
+    <span class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+      Excellence
+    </span>
+    <svg class="mobile-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-accordion-body">
+    <a href="a-propos.html#ethique" class="mobile-sub-link">Confiance &amp; Éthique Numériques</a>
+    <a href="a-propos.html#sante" class="mobile-sub-link">Santé &amp; Numérique</a>
+    <a href="a-propos.html#cybersecurite" class="mobile-sub-link">Cybersécurité</a>
+    <a href="a-propos.html#arts" class="mobile-sub-link">Arts Numériques</a>
+    <a href="a-propos.html#fintech" class="mobile-sub-link">FinTechs &amp; Énergie</a>
+    <a href="a-propos.html#humanities" class="mobile-sub-link">e-Humanities</a>
+    <a href="a-propos.html#cynotechnie" class="mobile-sub-link">Cynotechnie &amp; Innovation</a>
+  </div>
+
+  <button class="mobile-accordion-btn">
+    <span class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Formations
+    </span>
+    <svg class="mobile-accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-accordion-body">
+    <a href="formations.html#catalogue" class="mobile-sub-link">Catalogue des Formations</a>
+    <a href="formations.html#en-ligne" class="mobile-sub-link">Formations en Ligne</a>
+  </div>
+
+  <a href="entreprises.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/></svg>
+    Entreprises
+  </a>
+  <a href="actualites.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2Z"/></svg>
+    Actualités
+  </a>
+  <a href="videos.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+    Vidéos
+  </a>
+  <a href="contact.html" class="mobile-nav-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12"/></svg>
+    Contact
+  </a>
+
+  <div class="pt-4 border-t mt-2">
+    <a href="formations.html"
+      class="w-full flex items-center justify-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+      Consulter le Catalogue
+    </a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT
+     ══════════════════════════════════════════════════════════ -->
+<main id="main-content">
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 1 — HERO
+     ────────────────────────────────────────────────────────── -->
+<section id="accueil" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+  <div class="absolute inset-0 gradient-hero"></div>
+
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="blob absolute -top-1/2 -right-1/2 w-full h-full rounded-full"
+         style="background:rgba(255,255,255,0.06);filter:blur(80px)"></div>
+    <div class="blob-delay absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full"
+         style="background:rgba(255,255,255,0.06);filter:blur(80px)"></div>
+    <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full"
+         style="background:rgba(71,138,201,0.18);filter:blur(48px)"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
+         style="background:rgba(255,255,255,0.08);filter:blur(48px)"></div>
+    <!-- Floating particles -->
+    <div class="hero-particle" style="left:8%;top:25%;width:5px;height:5px;animation-duration:9s;animation-delay:0s"></div>
+    <div class="hero-particle" style="left:22%;top:65%;width:3px;height:3px;animation-duration:13s;animation-delay:1.2s"></div>
+    <div class="hero-particle" style="left:43%;top:78%;width:7px;height:7px;animation-duration:11s;animation-delay:3.5s"></div>
+    <div class="hero-particle" style="left:68%;top:28%;width:4px;height:4px;animation-duration:8s;animation-delay:2s"></div>
+    <div class="hero-particle" style="left:82%;top:68%;width:3px;height:3px;animation-duration:15s;animation-delay:4.5s"></div>
+    <div class="hero-particle" style="left:55%;top:12%;width:6px;height:6px;animation-duration:10s;animation-delay:1.8s"></div>
+    <div class="hero-particle" style="left:14%;top:88%;width:4px;height:4px;animation-duration:7s;animation-delay:0.7s"></div>
+    <div class="hero-particle" style="left:91%;top:42%;width:5px;height:5px;animation-duration:12s;animation-delay:3s"></div>
+    <div class="hero-particle" style="left:35%;top:42%;width:3px;height:3px;animation-duration:16s;animation-delay:5s"></div>
+    <div class="hero-particle" style="left:76%;top:82%;width:6px;height:6px;animation-duration:9.5s;animation-delay:1.5s"></div>
+  </div>
+
+  <div class="absolute inset-0 hero-grid-overlay"></div>
+
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+    <div class="max-w-5xl mx-auto text-center">
+
+      <div class="animate-on-scroll mb-6">
+        <span class="hero-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-white text-sm font-medium border"
+              style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);backdrop-filter:blur(8px)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+          Université Sorbonne Paris Nord
+        </span>
+      </div>
+
+      <h1 class="animate-on-scroll delay-100 hero-parallax font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        La Maison des
+        <span class="block text-gradient-hero" id="hero-typed-line"><span id="hero-typing"></span><span class="typing-cursor" id="hero-cursor"></span></span>
+      </h1>
+
+      <p class="animate-on-scroll delay-200 text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed"
+         style="color:rgba(255,255,255,0.8)">
+        Institut Fédératif de Recherche Interdisciplinaire. Nous faisons le pont entre
+        <span class="text-white font-medium">l'excellence académique</span> et
+        <span class="text-white font-medium">l'innovation industrielle</span>.
+      </p>
+
+      <p class="animate-on-scroll delay-300 text-base sm:text-lg mb-10 max-w-2xl mx-auto"
+         style="color:rgba(255,255,255,0.65)">
+        7 équipes de recherche, 30+ formations, 200+ chercheurs unis pour façonner
+        l'avenir du numérique en France et dans le monde.
+      </p>
+
+      <div class="animate-on-scroll delay-400 flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a href="a-propos.html"
+          class="btn-shimmer flex items-center justify-center gap-2 bg-white text-lamsn-blue-dark hover:bg-white/90 font-semibold px-8 py-4 rounded-lg transition-all text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          Découvrir nos expertises
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="formations.html"
+          class="btn-shimmer flex items-center justify-center gap-2 border font-semibold px-8 py-4 rounded-lg transition-all text-base text-white hover:bg-white/10 hover:-translate-y-0.5"
+          style="border-color:rgba(255,255,255,0.3)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Explorer les formations
+        </a>
+      </div>
+
+      <div class="animate-on-scroll delay-500 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6" id="hero-stats">
+        <div class="hero-stat rounded-xl p-4 md:p-6 border"
+             style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.12);backdrop-filter:blur(8px)">
+          <div class="text-3xl md:text-4xl font-serif font-bold text-white mb-1"><span class="count-up" data-count="30" data-suffix="+">30+</span></div>
+          <div class="text-sm font-medium text-white mb-1">Formations</div>
+          <div class="text-xs" style="color:rgba(255,255,255,0.55)">Du DUT au Master</div>
+        </div>
+        <div class="hero-stat rounded-xl p-4 md:p-6 border"
+             style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.12);backdrop-filter:blur(8px)">
+          <div class="text-3xl md:text-4xl font-serif font-bold text-white mb-1"><span class="count-up" data-count="7" data-suffix="">7</span></div>
+          <div class="text-sm font-medium text-white mb-1">Équipes de Recherche</div>
+          <div class="text-xs" style="color:rgba(255,255,255,0.55)">Domaines d'excellence</div>
+        </div>
+        <div class="hero-stat rounded-xl p-4 md:p-6 border"
+             style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.12);backdrop-filter:blur(8px)">
+          <div class="text-3xl md:text-4xl font-serif font-bold text-white mb-1"><span class="count-up" data-count="200" data-suffix="+">200+</span></div>
+          <div class="text-sm font-medium text-white mb-1">Chercheurs</div>
+          <div class="text-xs" style="color:rgba(255,255,255,0.55)">Enseignants-chercheurs</div>
+        </div>
+        <div class="hero-stat rounded-xl p-4 md:p-6 border"
+             style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.12);backdrop-filter:blur(8px)">
+          <div class="text-3xl md:text-4xl font-serif font-bold text-white mb-1"><span class="count-up" data-count="50" data-suffix="+">50+</span></div>
+          <div class="text-sm font-medium text-white mb-1">Partenaires</div>
+          <div class="text-xs" style="color:rgba(255,255,255,0.55)">Entreprises et institutions</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="w-6 h-10 rounded-full border-2 flex items-start justify-center p-2"
+         style="border-color:rgba(255,255,255,0.3)">
+      <div class="w-1 h-2 rounded-full" style="background:rgba(255,255,255,0.5)"></div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     DOMAIN STRIP — 7 Research Excellence Areas
+     ────────────────────────────────────────────────────────── -->
+<section class="domains-strip py-8 lg:py-10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-4 gap-4 flex-wrap">
+      <span class="section-eyebrow reveal-left">7 Domaines d'Excellence</span>
+      <a href="a-propos.html" class="text-xs font-medium text-lamsn-blue-light hover:text-lamsn-blue-medium transition-colors flex items-center gap-1 reveal-right">
+        En savoir plus
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="domains-grid-wrap">
+      <div class="domains-grid-inner">
+        <a href="a-propos.html#ethique" class="domain-pill animate-on-scroll">
+          <span class="domain-dot" style="background:#00a8e8"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">Confiance &amp; Éthique</span>
+        </a>
+        <a href="a-propos.html#sante" class="domain-pill animate-on-scroll delay-100">
+          <span class="domain-dot" style="background:#e63946"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">Santé Numérique</span>
+        </a>
+        <a href="a-propos.html#cybersecurite" class="domain-pill animate-on-scroll delay-200">
+          <span class="domain-dot" style="background:#2a9d8f"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">Cybersécurité</span>
+        </a>
+        <a href="a-propos.html#arts" class="domain-pill animate-on-scroll delay-100">
+          <span class="domain-dot" style="background:#f4a261"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">Arts Numériques</span>
+        </a>
+        <a href="a-propos.html#fintech" class="domain-pill animate-on-scroll delay-200">
+          <span class="domain-dot" style="background:#e9c46a"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">FinTechs &amp; Énergie</span>
+        </a>
+        <a href="a-propos.html#humanities" class="domain-pill animate-on-scroll delay-300">
+          <span class="domain-dot" style="background:#9b5de5"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">e-Humanities</span>
+        </a>
+        <a href="a-propos.html#cynotechnie" class="domain-pill animate-on-scroll delay-400">
+          <span class="domain-dot" style="background:#f15bb5"></span>
+          <span class="text-xs font-semibold text-lamsn-blue-dark leading-tight">Cynotechnie</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 2 — ACTUALITÉS
+     ────────────────────────────────────────────────────────── -->
+<section id="actualites" class="py-20 lg:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="animate-on-scroll section-eyebrow" style="justify-content:center">Restez Informés</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Actualités &amp; Événements</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium leading-relaxed">
+        Découvrez nos dernières actualités, événements à venir et les publications de nos chercheurs.
+      </p>
+    </div>
+
+    <!-- Magazine grid — 4 articles, click to open detail modal -->
+    <div class="news-magazine mb-10" id="cms-actu-home">
+      <!-- Cards are rendered by JS from NEWS_ARTICLES data array below -->
+    </div>
+
+    <div class="text-center">
+      <a href="actualites.html"
+        class="inline-flex items-center gap-2 border border-lamsn-blue-light text-lamsn-blue-light hover:bg-lamsn-blue-light hover:text-white font-medium px-6 py-3 rounded-lg transition-colors">
+        Toutes les actualités &amp; événements
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 3 — NOS VIDÉOS
+     ────────────────────────────────────────────────────────── -->
+<section id="videos" class="py-20 lg:py-32 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="animate-on-scroll section-eyebrow" style="justify-content:center">Médiathèque</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Nos Vidéos</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium leading-relaxed">
+        Conférences, présentations de formations et événements — découvrez LaMSN en images.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="cms-videos-home">
+
+      <!-- Video card 1 — YouTube thumbnail auto-injected by JS -->
+      <div class="animate-on-scroll delay-300 bg-white rounded-2xl overflow-hidden shadow-md card-hover"
+           data-video-src="https://www.youtube.com/watch?v=u5nc2qf5HIc">
+        <div class="video-card-thumb">
+          <!-- fallback gradient shown until thumbnail loads -->
+          <div class="absolute inset-0 gradient-lamsn" style="z-index:0"></div>
+          <button class="video-play-btn" aria-label="Lire la vidéo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#293358" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 mb-2">Conférence</span>
+          <h3 class="font-semibold text-lamsn-blue-dark mb-1 line-clamp-2">HoloLens en chirurgie orthopédique — Pr Thomas GREGORY</h3>
+          <p class="text-sm text-lamsn-gray-medium line-clamp-2">Opération de l'épaule retransmise en direct avec les HoloLens — une première mondiale en chirurgie augmentée.</p>
+        </div>
+      </div>
+
+      <!-- Video card 2 — Google Drive thumbnail auto-injected by JS -->
+      <div class="animate-on-scroll delay-400 bg-white rounded-2xl overflow-hidden shadow-md card-hover"
+           data-video-src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view">
+        <div class="video-card-thumb">
+          <div class="absolute inset-0" style="background:linear-gradient(135deg,#354878,#478ac9);z-index:0"></div>
+          <button class="video-play-btn" aria-label="Lire la vidéo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#293358" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 mb-2">Formation</span>
+          <h3 class="font-semibold text-lamsn-blue-dark mb-1 line-clamp-2">Présentation du Master EID2 — Data Science &amp; ML</h3>
+          <p class="text-sm text-lamsn-gray-medium line-clamp-2">Découvrez notre formation phare en exploration informatique des données et décisionnel.</p>
+        </div>
+      </div>
+
+      <!-- Video card 3 — no video src, gradient fallback -->
+      <div class="animate-on-scroll delay-500 bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+        <div class="video-card-thumb">
+          <div class="absolute inset-0" style="background:linear-gradient(135deg,#1a2340,#293358);z-index:0"></div>
+          <button class="video-play-btn" aria-label="Lire la vidéo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#293358" stroke="none"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+        <div class="p-5">
+          <span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700 mb-2">Partenariat</span>
+          <h3 class="font-semibold text-lamsn-blue-dark mb-1 line-clamp-2">LaMSN et l'industrie — Témoignages de partenaires</h3>
+          <p class="text-sm text-lamsn-gray-medium line-clamp-2">Nos entreprises partenaires témoignent de leur collaboration avec nos équipes de recherche.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="videos.html"
+        class="inline-flex items-center gap-2 border border-lamsn-blue-light text-lamsn-blue-light hover:bg-lamsn-blue-light hover:text-white font-medium px-6 py-3 rounded-lg transition-colors">
+        Voir toutes les vidéos
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ──────────────────────────────────────────────────────────
+     SECTION 4 — AU SERVICE DE TOUS
+     ────────────────────────────────────────────────────────── -->
+<section id="au-service" class="py-20 lg:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="animate-on-scroll section-eyebrow" style="justify-content:center">Notre Mission</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Au service de tous</h2>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+
+      <div class="animate-on-scroll delay-200 bg-lamsn-gray-light rounded-2xl p-8 lg:p-12 mb-10">
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-xl gradient-lamsn flex items-center justify-center flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark mb-1">USPN &amp; LaMSN</h3>
+            <p class="text-sm text-lamsn-gray-medium">Université Sorbonne Paris Nord — Institut Fédératif de Recherche Interdisciplinaire</p>
+          </div>
+        </div>
+        <p class="text-lamsn-gray-dark leading-relaxed text-base lg:text-lg">
+          L'Université Sorbonne Paris Nord (USPN) oriente sa stratégie numérique vers la réussite des étudiants,
+          le soutien des enseignants-chercheurs et le rapprochement avec l'industrie. La création de la Maison des
+          Sciences Numériques (LaMSN) vise à fusionner recherche avancée, formations d'excellence, et interactions
+          entre le monde académique et industriel. LaMSN, en tant que tiers-lieu au sein de l'université, ambitionne
+          d'incorporer un complexe événementiel, des espaces de recherche collaborative, des environnements
+          pédagogiques novateurs et des bureaux nomades, illustrant ainsi un modèle original de convergence entre
+          l'université, le monde socio-économique et la société civile.
+        </p>
+      </div>
+
+      <!-- Video -->
+      <div class="animate-on-scroll delay-300">
+        <video class="au-service-video" controls preload="metadata" poster="">
+          <source src="data/au_service.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture vidéo HTML5.
+        </video>
+        <p class="text-sm text-center text-lamsn-gray-medium mt-4 italic">
+          LaMSN — La Maison des Sciences Numériques au service de tous
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PARTENAIRES
+     ══════════════════════════════════════════════════════════ -->
+<section id="partenaires" class="py-16 lg:py-24 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="animate-on-scroll section-eyebrow" style="justify-content:center">Écosystème</span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl font-bold text-lamsn-blue-dark mb-4">Nos Partenaires</h2>
+      <p class="animate-on-scroll delay-200 text-lamsn-gray-medium leading-relaxed">
+        LaMSN collabore avec des entreprises, institutions académiques et organismes publics pour faire avancer la recherche et l'innovation numérique.
+      </p>
+    </div>
+
+    <div class="animate-on-scroll delay-300 partners-logo-row mb-8">
+      <!-- USPN institutional logo -->
+      <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" title="Université Sorbonne Paris Nord">
+        <img src="data/Logo-USPN.png" alt="Université Sorbonne Paris Nord" class="partner-logo-img" onerror="this.parentElement.className='partner-logo-slot';this.parentElement.textContent='USPN'" />
+      </a>
+      <!-- Placeholder slots for future partner logos -->
+      <div class="partner-logo-slot">
+        <span>Partenaire à venir</span>
+      </div>
+      <div class="partner-logo-slot">
+        <span>Partenaire à venir</span>
+      </div>
+      <div class="partner-logo-slot">
+        <span>Partenaire à venir</span>
+      </div>
+      <div class="partner-logo-slot">
+        <span>Partenaire à venir</span>
+      </div>
+    </div>
+
+    <div class="text-center animate-on-scroll delay-400">
+      <p class="text-sm text-lamsn-gray-medium mb-4">Vous souhaitez devenir partenaire de LaMSN ?</p>
+      <a href="contact.html"
+        class="inline-flex items-center gap-2 border border-lamsn-blue-light text-lamsn-blue-light hover:bg-lamsn-blue-light hover:text-white font-medium px-6 py-2.5 rounded-lg transition-colors text-sm">
+        Nous contacter
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer class="bg-lamsn-blue-dark text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12">
+
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-3 lg:col-span-2">
+        <div class="flex items-center gap-3 mb-6">
+          <img src="data/logo_recent.png" alt="LaMSN" class="h-10 w-auto object-contain" style="filter:brightness(0) invert(1)" />
+          <div>
+            <span class="font-serif font-bold text-xl">LaMSN</span>
+            <span class="block text-xs" style="color:rgba(255,255,255,0.55)">La Maison des Sciences Numériques</span>
+          </div>
+        </div>
+        <p class="text-sm leading-relaxed mb-6 max-w-sm" style="color:rgba(255,255,255,0.65)">
+          Institut Fédératif de Recherche Interdisciplinaire de l'Université Sorbonne Paris Nord.
+          Nous faisons le pont entre l'excellence académique et l'innovation industrielle.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 text-sm" style="color:rgba(255,255,255,0.65)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            20 Avenue George Sand, 93210 Saint-Denis
+          </div>
+          <div class="flex items-center gap-3 text-sm" style="color:rgba(255,255,255,0.65)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>
+            01 55 93 93 93
+          </div>
+          <div class="flex items-center gap-3 text-sm" style="color:rgba(255,255,255,0.65)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            celia.agnoli@lamsn.sorbonne-paris-nord.fr
+          </div>
+        </div>
+      </div>
+
+      <!-- À Propos -->
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">À Propos</h4>
+        <ul class="space-y-2">
+          <li><a href="a-propos.html#mission" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Mission &amp; Vision</a></li>
+          <li><a href="a-propos.html#transformation" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Transformation Numérique</a></li>
+          <li><a href="a-propos.html#objectifs" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Nos Objectifs</a></li>
+          <li><a href="a-propos.html#gouvernance" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Gouvernance</a></li>
+        </ul>
+      </div>
+
+      <!-- Excellence -->
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Excellence</h4>
+        <ul class="space-y-2">
+          <li><a href="a-propos.html#ethique" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Confiance &amp; Éthique</a></li>
+          <li><a href="a-propos.html#sante" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Santé &amp; Numérique</a></li>
+          <li><a href="a-propos.html#cybersecurite" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Cybersécurité</a></li>
+          <li><a href="a-propos.html#arts" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Arts Numériques</a></li>
+          <li><a href="a-propos.html#fintech" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">FinTechs</a></li>
+          <li><a href="a-propos.html#humanities" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">e-Humanities</a></li>
+        </ul>
+      </div>
+
+      <!-- Formations & Entreprises -->
+      <div>
+        <h4 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Formations</h4>
+        <ul class="space-y-2">
+          <li><a href="formations.html#catalogue" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Catalogue</a></li>
+          <li><a href="formations.html#en-ligne" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Formations en Ligne</a></li>
+          <li><a href="formations.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Masters</a></li>
+          <li><a href="formations.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Licences Pro</a></li>
+        </ul>
+        <h4 class="font-semibold text-white mt-6 mb-4 text-sm uppercase tracking-wider">Entreprises</h4>
+        <ul class="space-y-2">
+          <li><a href="entreprises.html#partenariats" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Partenariats</a></li>
+          <li><a href="entreprises.html#tarifs" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Tarifs</a></li>
+          <li><a href="contact.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Contact</a></li>
+        </ul>
+        <h4 class="font-semibold text-white mt-6 mb-4 text-sm uppercase tracking-wider">Médiathèque</h4>
+        <ul class="space-y-2">
+          <li><a href="videos.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Toutes les vidéos</a></li>
+          <li><a href="actualites.html" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.65)">Actualités</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="border-t" style="border-color:rgba(255,255,255,0.1)">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-center md:text-left" style="color:rgba(255,255,255,0.55)">
+        &copy; <span id="copyright-year"></span> LaMSN — Université Sorbonne Paris Nord. Tous droits réservés.
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-1.5 text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          Université Sorbonne Paris Nord
+        </a>
+        <a href="#" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Mentions légales</a>
+        <a href="#" class="text-sm hover:text-white transition-colors" style="color:rgba(255,255,255,0.55)">Confidentialité</a>
+        <a href="/admin/" class="footer-admin-link" title="Administration">·</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     CHATBOT WIDGET
+     ══════════════════════════════════════════════════════════ -->
+<button id="chatbot-toggle" aria-label="Ouvrir le chat">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+
+<div id="chatbot-window">
+  <div class="flex items-center justify-between p-4 gradient-lamsn">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.2)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-white text-sm">Assistant LaMSN</h3>
+        <p class="text-xs flex items-center gap-1" style="color:rgba(255,255,255,0.7)">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
+          En ligne
+        </p>
+      </div>
+    </div>
+    <button id="chatbot-close" class="p-1.5 rounded-lg hover:bg-white/20 transition-colors text-white" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div id="chatbot-messages"></div>
+  <div class="p-4 border-t bg-white">
+    <div class="flex gap-2">
+      <input id="chatbot-input" type="text" placeholder="Posez votre question..."
+        class="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+      <button id="chatbot-send"
+        class="bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white p-2 rounded-lg transition-colors" aria-label="Envoyer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+    <p class="text-xs text-center mt-2" style="color:#999">Appuyez sur Entrée pour envoyer</p>
+  </div>
+</div>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', function(user) {
+      if (!user) {
+        window.netlifyIdentity.on('login', function() {
+          if (!/^\/admin\/?$/.test(window.location.pathname)) {
+            document.location.href = '/admin/';
+          }
+        });
+      }
+    });
+  }
+</script>
+<script src="cms.js"></script>
+<script src="script.js"></script>
+
+<!-- ══════════════════════════════════════════════════════════
+     NEWS DETAIL MODAL
+     ══════════════════════════════════════════════════════════ -->
+<div id="news-modal-overlay" class="news-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="nm-title">
+  <div class="news-modal" id="news-modal-box">
+    <!-- Hero image area (injected by JS) -->
+    <div class="news-modal-hero" id="nm-hero">
+      <button class="news-modal-close" id="nm-close" aria-label="Fermer l'article">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <!-- Text content -->
+    <div class="news-modal-content">
+      <div class="news-modal-meta">
+        <span id="nm-date" class="news-modal-date"></span>
+        <span id="nm-cat" class="inline-block text-xs font-semibold px-3 py-1 rounded-full"></span>
+      </div>
+      <h2 class="news-modal-title" id="nm-title"></h2>
+      <p class="news-modal-excerpt" id="nm-excerpt"></p>
+      <div class="news-modal-divider"></div>
+      <div class="news-modal-body" id="nm-body"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════
+   NEWS ARTICLES DATA — extracted from Actualité.html
+   ══════════════════════════════════════════════════════════ */
+var NEWS_ARTICLES = [
+  /* 0 — Imperial College London */
+  {
+    title   : 'LaMSN accueille une délégation de l\'Imperial College London',
+    date    : '28 mars 2024',
+    category: 'Recherche',
+    badge   : 'bg-blue-100 text-blue-700',
+    img     : 'Actualité_files/IC-1.jpg',
+    imgAlt  : 'Délégation Imperial College London à LaMSN',
+    excerpt : 'Ulrich Hansen et le Pr Roger Emery visitent LaMSN — échanges sur la chirurgie assistée par IA et la réalité augmentée.',
+    url     : '',
+    body    : '<p>🌟 C\'est avec un grand plaisir que nous avons accueilli <strong>Ulrich Hansen</strong> et le <strong>Pr Roger Emery</strong> du <strong>Imperial College London</strong> 🇬🇧 à LaMSN — La Maison des Sciences Numériques 🇨🇵. Cette rencontre a permis de nombreuses discussions autour du chirurgien assisté par l\'intelligence artificielle et de la présence des nouvelles technologies dans les hôpitaux.</p><p>👩‍🎓 👨‍🎓 Les étudiants en L3 Informatique de l\'Université Sorbonne Paris Nord ont eu l\'opportunité de participer à ces échanges et de découvrir l\'un des domaines d\'applications de leur formation : celui de la santé numérique.</p><p>🥽 Cette journée fut aussi l\'occasion de voyager dans le monde de la réalité augmentée, de réfléchir à son usage dans le bloc opératoire et de comparer deux technologies : les <strong>HoloLens 2</strong> et les <strong>Apple Vision Pro</strong>.</p><p>🔬 Un projet de recherche commun autour de l\'IA et de la chirurgie de l\'épaule entre LaMSN et Imperial College London a commencé à voir le jour lors de ces échanges — nous lui souhaitons un grand succès.</p><p>👏 Un grand merci à Ulrich Hansen et au Pr Roger Emery pour leur visite et leur engagement, et à <strong>Thomas GRÉGORY</strong> et <strong>Thomas Papastergiou</strong> pour leur présentation et le partage de leurs expériences scientifiques.</p>'
+  },
+  /* 1 — Google Ateliers Numériques */
+  {
+    title   : 'Formation LaMSN × Google Ateliers Numériques',
+    date    : '12 – 13 mars 2024',
+    category: 'Formation',
+    badge   : 'bg-green-100 text-green-700',
+    img     : 'Actualité_files/Capturedcran2024-01-23100739.png',
+    imgAlt  : 'Formation Google Ateliers Numériques',
+    excerpt : 'Formation de 2 jours sur le marketing digital, l\'IA et la cybersécurité en partenariat avec Google Ateliers Numériques.',
+    url     : '',
+    body    : '<p>LaMSN — La Maison des Sciences Numériques de l\'Université Sorbonne Paris Nord, en partenariat avec <strong>Google Ateliers Numériques</strong>, a proposé une formation exceptionnelle de 2 jours dédiée à l\'univers du marketing digital, de l\'intelligence artificielle et de la cybersécurité.</p><p>📅 <strong>Date :</strong> 12 au 13 mars 2024 &nbsp;·&nbsp; 🕒 8h30 à 16h45 &nbsp;·&nbsp; 📍 LaMSN, La Maison des Sciences Numériques</p><p>🌐 <strong>Au programme de ces deux jours intensifs :</strong></p><p>✨ <strong>Digital au cœur du succès :</strong> Lancer et développer un projet grâce au digital — création de site web, publicité en ligne, SEO, réseaux sociaux. Le coach Google guide chaque participant à chaque étape.</p><p>🤖 <strong>IA dans le marketing digital :</strong> Explorer les opportunités fascinantes offertes par l\'intelligence artificielle dans le domaine du marketing et propulser son projet vers de nouveaux sommets.</p><p>🔒 <strong>Cybersécurité à l\'ère d\'Internet :</strong> Apprendre à protéger ses données et sa présence en ligne grâce aux conseils d\'experts préparant aux défis de demain.</p><p>🚀 <strong>Se démarquer professionnellement :</strong> Acquérir des compétences recherchées par les employeurs dans un environnement numérique en constante évolution.</p><p>L\'inscription était <strong>sans frais et obligatoire</strong>.</p>'
+  },
+  /* 2 — Master EID2 entretiens */
+  {
+    title   : 'Entretiens de recrutement — Master 2 Informatique EID2',
+    date    : 'Janvier 2024',
+    category: 'Formation',
+    badge   : 'bg-green-100 text-green-700',
+    img     : 'Actualité_files/Capturedcran2024-01-24123459.png',
+    imgAlt  : 'Entretiens Master EID2',
+    excerpt : '38 étudiants du Master 2 EID2 rencontrent Capgemini, Epsilon et Micropole pour leurs stages de fin d\'études.',
+    url     : '',
+    body    : '<p>La Maison des Sciences Numériques (Institut Galilée – Université Sorbonne Paris Nord) a organisé des entretiens de recrutement pour les <strong>38 étudiants du Master 2 Informatique</strong> parcours <strong>EID2</strong> (Exploration Informatique des Données et Décisionnel), afin qu\'ils décrochent leur stage de fin d\'études.</p><p>Les entretiens ont été menés avec <strong>3 entreprises partenaires</strong> :</p><p>🏢 <strong>Capgemini</strong>, représentée par Emie PRUVOST<br>🏢 <strong>Epsilon</strong>, représentée par Eva SCHMITTHENNER et Sherley HORACE<br>🏢 <strong>Micropole</strong>, représentée par Sara SEBBANE et Jofrey BONNEL</p><p>Un grand merci aux entreprises pour la réalisation de cette opération, très profitable aux étudiants qui vont bientôt débuter leur carrière professionnelle à l\'issue de leur stage de fin d\'études.</p>'
+  },
+  /* 3 — EVOLUTIS chirurgie IA */
+  {
+    title   : 'Collaboration LaMSN × EVOLUTIS — Chirurgie guidée par l\'IA',
+    date    : 'Janvier 2024',
+    category: 'Recherche',
+    badge   : 'bg-blue-100 text-blue-700',
+    img     : 'Actualité_files/1705152295941.jpeg',
+    imgAlt  : 'Collaboration EVOLUTIS chirurgie IA',
+    excerpt : 'LaMSN accueille le groupe EVOLUTIS pour explorer des possibilités de collaboration dans la chirurgie guidée par l\'IA.',
+    url     : '',
+    body    : '<p>Nous sommes ravis d\'avoir accueilli récemment le <strong>groupe EVOLUTIS</strong> et ses partenaires au sein de notre structure fédérative de recherche interdisciplinaire : LaMSN — La Maison des Sciences Numériques, de l\'Université Sorbonne Paris Nord.</p><p>Une rencontre enrichissante où nous avons échangé sur les différentes possibilités de collaboration dans le domaine de la <strong>chirurgie guidée par l\'IA</strong>. 🏥</p><p>🌟 LaMSN, en tant que centre de recherche interdisciplinaire, est en constante quête d\'innovation, notamment dans le domaine médical. Cette visite a été l\'occasion d\'explorer ensemble des formats de collaboration et des pistes prometteuses pour l\'avenir. 💡</p>'
+  },
+  /* 4 — Fondation Maison du Maroc */
+  {
+    title   : 'LaMSN au 70ème anniversaire de la Fondation Maison du Maroc',
+    date    : '7 décembre 2023',
+    category: 'Événement',
+    badge   : 'bg-yellow-100 text-yellow-700',
+    img     : 'Actualité_files/Capturedcran2024-01-23101225.png',
+    imgAlt  : '70e anniversaire Fondation Maison du Maroc',
+    excerpt : 'Le Pr Younès BENNANI prononce une conférence sur «L\'Inintelligence de l\'Intelligence Artificielle» lors du 70e anniversaire.',
+    url     : '',
+    body    : '<p>À l\'occasion du <strong>70ème anniversaire de la Fondation Maison du Maroc</strong>, notre Directeur scientifique, le <strong>Professeur Younès BENNANI</strong>, a prononcé une conférence captivante intitulée : <em>«L\'Inintelligence de l\'Intelligence Artificielle»</em>. L\'événement a suscité une réponse très positive de la part de nombreux participants.</p><p>Le Professeur Younès BENNANI a fièrement présenté LaMSN — structure fédérative de recherche interdisciplinaire de l\'Université Sorbonne Paris Nord — soulignant l\'importance de la collaboration interdisciplinaire tant dans la recherche que dans l\'éducation.</p><p>🔍 <strong>Principaux points abordés :</strong> Progrès ou cauchemar ? — une dichotomie qui entoure l\'avènement des robots «intelligents» et la «conscience» potentielle de l\'IA. Bien que l\'IA ait fait des progrès significatifs, elle excelle dans des tâches spécifiques mais peine à reproduire la diversité des capacités cognitives d\'une drosophile (petite mouche).</p><p>Des échanges de grande qualité ont eu lieu avec le Professeur <strong>Abderrahman Tenkoul</strong> de l\'Université Euro-Méditerranéenne de Fès, mettant en lumière une convergence interdisciplinaire sur les complexités de l\'IA.</p><p>📋 <strong>Conférencier(e)s :</strong> Amal EL FALLAH-SEGHROUCHNI, Younès BENNANI, Abderrahman TENKOUL, Aissa KERKOUR &nbsp;·&nbsp; <strong>Président :</strong> Abdelhadi ZAHOUANI</p>'
+  },
+  /* 5 — SIRIC InsiTu */
+  {
+    title   : 'LaMSN au kickoff du SIRIC InsiTu',
+    date    : '22 septembre 2023',
+    category: 'Recherche',
+    badge   : 'bg-purple-100 text-purple-700',
+    img     : 'Actualité_files/lumiere.jpg',
+    imgAlt  : 'SIRIC InsiTu kickoff LaMSN',
+    excerpt : 'Le Pr Younès BENNANI présente LaMSN et ses contributions en IA appliquée au diagnostic du cancer au coup d\'envoi du SIRIC InsiTu.',
+    url     : '',
+    body    : '<p>🌟 Nous sommes fiers de mettre en avant notre Directeur Scientifique, le <strong>Professeur Younès BENNANI</strong>, pour sa participation remarquable au coup d\'envoi du <strong>SIRIC InsiTu</strong>. Cet événement a été l\'occasion de présenter la structure fédérative LaMSN ainsi que ses contributions scientifiques dans le domaine de l\'Intelligence Artificielle appliquée au <strong>diagnostic et aux traitements du cancer</strong>.</p><p>📍 L\'exposé du Professeur Younès BENNANI a été un véritable succès, suscitant un grand enthousiasme parmi les participants. Ses connaissances approfondies en IA ont ouvert de nouvelles perspectives passionnantes pour la recherche sur le cancer, démontrant que la collaboration entre les sciences médicales et l\'IA peut révolutionner la manière dont nous abordons cette lutte essentielle.</p><p>Nous tenons à remercier chaleureusement notre directeur scientifique pour son dévouement inébranlable envers l\'avancement de la recherche médicale et pour avoir représenté avec excellence LaMSN lors de cet événement crucial.</p>'
+  },
+  /* 6 — Ministre de la Santé */
+  {
+    title   : 'Visite du ministre de la Santé François BRAUN à LaMSN',
+    date    : '17 juillet 2023',
+    category: 'Événement',
+    badge   : 'bg-red-100 text-red-700',
+    img     : 'Actualité_files/ministre.jpg',
+    imgAlt  : 'Visite ministre de la Santé François BRAUN',
+    excerpt : 'LaMSN accueille François BRAUN autour du thème Santé & IA — réalité augmentée, prototypes robotiques et dynamique interdisciplinaire.',
+    url     : '',
+    body    : '<p>La Maison des Sciences Numériques (LaMSN) de l\'Université a eu l\'honneur d\'accueillir la visite du <strong>ministre de la Santé, Monsieur François BRAUN</strong>. L\'événement s\'est déroulé autour du thème captivant de la <strong>santé et de l\'intelligence artificielle</strong>, explorant des domaines tels que la réalité augmentée et les prototypes de robots.</p><p>Cette rencontre a mis en lumière une dynamique interdisciplinaire au sein de LaMSN, mettant en avant son engagement à servir une ambition commune : la création de produits numériques et scientifiques innovants au service de la santé publique.</p>'
+  },
+  /* 7 — Préfet Seine-Saint-Denis */
+  {
+    title   : 'Visite du Préfet de la Seine-Saint-Denis à LaMSN',
+    date    : '9 juin 2023',
+    category: 'Événement',
+    badge   : 'bg-orange-100 text-orange-700',
+    img     : 'Actualité_files/prefecture.png',
+    imgAlt  : 'Visite Préfet Seine-Saint-Denis LaMSN',
+    excerpt : 'LaMSN accueille le Préfet Jacques WITKOWSKI pour partager sa passion pour l\'innovation, la recherche et la formation numérique.',
+    url     : '',
+    body    : '<p>🚀🔬✨ Nous avons eu l\'honneur d\'accueillir le <strong>Préfet de la Seine-Saint-Denis, Monsieur Jacques WITKOWSKI</strong>, à La Maison des Sciences Numériques (LaMSN). Nous avons partagé notre passion pour l\'innovation, la recherche et la formation.</p><p>Merci au Préfet pour cette visite enrichissante ! Restez à l\'écoute pour découvrir nos prochaines avancées passionnantes.</p><p style="color:#9ca3af;font-size:0.9rem">#LaMSN_USPN &nbsp;#Innovation &nbsp;#Recherche &nbsp;#Formation</p>'
+  },
+  /* 8 — HoloLens chirurgie orthopédique */
+  {
+    title   : 'HoloLens en chirurgie orthopédique — Pr Thomas GREGORY',
+    date    : '5 décembre 2017',
+    category: 'Recherche',
+    badge   : 'bg-blue-100 text-blue-700',
+    img     : 'Actualité_files/operation.jpg',
+    imgAlt  : 'HoloLens chirurgie opération épaule',
+    excerpt : 'Le Pr Thomas GREGORY réalise une opération de l\'épaule en direct avec les HoloLens — partage du savoir médical à distance.',
+    url     : 'https://www.youtube.com/watch?v=u5nc2qf5HIc',
+    body    : '<p>Le <strong>5 décembre 2017</strong>, le <strong>professeur Thomas GREGORY</strong> de l\'hôpital Avicenne AP-HP a marqué un tournant dans le domaine de la chirurgie orthopédique en réalisant une <strong>opération de l\'épaule à l\'aide d\'un casque HoloLens</strong>. Cette technologie a permis de retransmettre en direct sa méthode, offrant ainsi une opportunité unique de partage du savoir à distance.</p><p>L\'intervention a été suivie en direct par plusieurs dizaines d\'agents de l\'établissement, ouvrant la voie à de nombreux bénéfices :<br>• Meilleure adhésion des équipes médicales<br>• Ressource pédagogique innovante<br>• Suivi de formations en distanciel<br>• Démonstration immersive</p><p>Une avancée majeure pour l\'<strong>éducation médicale</strong> et la collaboration à distance dans le domaine de la santé.</p>'
+  }
+];
+
+/* ══════════════════════════════════════════════════════════
+   RENDER CARDS into #cms-actu-home
+   ══════════════════════════════════════════════════════════ */
+(function renderCards() {
+  var ICON_RESEARCH = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 2.02-2.46z"/></svg>';
+  var ICON_FORMATION = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>';
+  var ICON_EVENT = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+  var FALLBACK_BG = { 'Recherche':'linear-gradient(135deg,#293358,#354878)', 'Formation':'linear-gradient(135deg,#354878,#478ac9)', 'Événement':'linear-gradient(135deg,#1a2340,#293358)' };
+  var DELAY = ['delay-300','delay-400','delay-500'];
+  var READ_ICON = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
+
+  var grid = document.getElementById('cms-actu-home');
+  if (!grid) return;
+
+  grid.innerHTML = NEWS_ARTICLES.slice(0, 4).map(function(a, i) {
+    var icon = a.category === 'Formation' ? ICON_FORMATION : a.category === 'Recherche' ? ICON_RESEARCH : ICON_EVENT;
+    var fallBg = FALLBACK_BG[a.category] || FALLBACK_BG['Recherche'];
+    var delay = DELAY[i % 3];
+    var urlDot = a.url ? '<span class="news-card-url-dot" title="Source externe disponible"></span>' : '';
+    return '<div class="news-card animate-on-scroll ' + delay + '" onclick="openNewsModal(' + i + ')" role="button" tabindex="0" aria-label="Lire : ' + a.title.replace(/'/g,"&#39;") + '">'
+      + '  <div class="news-card-img-wrap">'
+      + '    <img src="' + a.img + '" alt="' + (a.imgAlt||'').replace(/"/g,'&quot;') + '" class="news-card-img"'
+      + '         onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'" />'
+      + '    <div class="news-card-img-placeholder" style="display:none;background:' + fallBg + '">' + icon + '</div>'
+      + '    <span class="news-card-cat-badge ' + a.badge + '">' + a.category + '</span>'
+      + '  </div>'
+      + '  <div class="news-card-body">'
+      + '    <div class="news-card-date">' + a.date + '</div>'
+      + '    <h3 class="news-card-title">' + a.title.replace(/&/g,'&amp;') + '</h3>'
+      + '    <p class="news-card-excerpt">' + a.excerpt.replace(/&/g,'&amp;') + '</p>'
+      + '    <span class="mt-auto pt-3 text-xs font-semibold flex items-center gap-1" style="color:#478ac9">Lire l\'article ' + READ_ICON + urlDot + '</span>'
+      + '  </div>'
+      + '</div>';
+  }).join('\n');
+
+  /* keyboard Enter/Space support */
+  grid.querySelectorAll('.news-card').forEach(function(card, i) {
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openNewsModal(i); }
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════════════
+   NEWS MODAL — open / close
+   ══════════════════════════════════════════════════════════ */
+(function() {
+  var overlay = document.getElementById('news-modal-overlay');
+  var closeBtn = document.getElementById('nm-close');
+  var hero    = document.getElementById('nm-hero');
+  var dateEl  = document.getElementById('nm-date');
+  var catEl   = document.getElementById('nm-cat');
+  var titleEl   = document.getElementById('nm-title');
+  var excerptEl = document.getElementById('nm-excerpt');
+  var bodyEl    = document.getElementById('nm-body');
+
+  window.openNewsModal = function(idx) {
+    var a = NEWS_ARTICLES[idx];
+    if (!a) return;
+
+    /* Hero image */
+    var oldImg = hero.querySelector('img');
+    if (oldImg) oldImg.remove();
+    var oldPh = hero.querySelector('.nm-placeholder');
+    if (oldPh) oldPh.remove();
+
+    if (a.img) {
+      var img = new Image();
+      img.className = 'news-modal-img';
+      img.alt = a.imgAlt || '';
+      img.onerror = function() {
+        this.remove();
+        var ph = document.createElement('div');
+        ph.className = 'news-modal-img-placeholder nm-placeholder';
+        ph.style.cssText = 'background:linear-gradient(135deg,#293358,#478ac9);height:200px';
+        hero.insertBefore(ph, hero.firstChild);
+      };
+      img.src = a.img;
+      hero.insertBefore(img, closeBtn);
+    } else {
+      var ph = document.createElement('div');
+      ph.className = 'news-modal-img-placeholder nm-placeholder';
+      ph.style.cssText = 'background:linear-gradient(135deg,#293358,#354878);height:200px';
+      hero.insertBefore(ph, closeBtn);
+    }
+
+    /* Text */
+    dateEl.textContent = a.date;
+    catEl.className = 'inline-block text-xs font-semibold px-3 py-1 rounded-full ' + a.badge;
+    catEl.textContent = a.category;
+    titleEl.textContent = a.title;
+    excerptEl.textContent = a.excerpt || '';
+    excerptEl.style.display = a.excerpt ? '' : 'none';
+    /* body is trusted static markup (not user input) */
+    bodyEl.innerHTML = a.body;
+
+    /* Source URL button */
+    var oldSrcBtn = bodyEl.querySelector('.news-source-btn');
+    if (oldSrcBtn) oldSrcBtn.remove();
+    if (a.url) {
+      var srcBtn = document.createElement('a');
+      srcBtn.href = a.url;
+      srcBtn.target = '_blank';
+      srcBtn.rel = 'noopener noreferrer';
+      srcBtn.className = 'news-source-btn';
+      srcBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Voir la source originale';
+      bodyEl.appendChild(srcBtn);
+    }
+
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    /* Scroll modal to top */
+    document.getElementById('news-modal-box').scrollTop = 0;
+    closeBtn.focus();
+  };
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+})();
+</script>
+</body>
+</html>

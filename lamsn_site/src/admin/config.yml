@@ -1,0 +1,157 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Images uploaded via the CMS are saved here
+media_folder: src/data/images
+public_folder: /data/images
+
+locale: fr
+
+collections:
+
+  # ── Actualités ──────────────────────────────────────────────────
+  - name: actualites
+    label: Actualités
+    files:
+      - name: actualites_list
+        label: Articles d'actualité
+        file: src/data/actualites.json
+        format: json
+        fields:
+          - name: items
+            label: Articles
+            widget: list
+            summary: "{{fields.titre}} — {{fields.date}}"
+            fields:
+              - { name: titre,     label: Titre,    widget: string }
+              - { name: resume,    label: Résumé,   widget: text }
+              - { name: contenu,   label: "Contenu complet (optionnel)", widget: text, required: false }
+              - { name: date,      label: Date,     widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+              - name: categorie
+                label: Catégorie
+                widget: select
+                options:
+                  - Événement
+                  - Partenariat
+                  - Formation
+                  - Recherche
+                  - Prix
+                  - Conférence
+              - name: image
+                label: "Image (URL Google Drive ou lien direct)"
+                widget: string
+                required: false
+                hint: "Collez un lien Google Drive (partage public) ou une URL directe d'image."
+              - { name: publie, label: Publié, widget: boolean, default: true }
+
+  # ── Vidéos ──────────────────────────────────────────────────────
+  - name: videos
+    label: Vidéos
+    files:
+      - name: videos_list
+        label: Vidéos
+        file: src/data/videos.json
+        format: json
+        fields:
+          - name: items
+            label: Vidéos
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { name: titre,       label: Titre,       widget: string }
+              - { name: description, label: Description, widget: text }
+              - name: url
+                label: "URL de la vidéo"
+                widget: string
+                hint: "YouTube, Vimeo, ou lien Google Drive (ex: https://drive.google.com/file/d/ID/view)"
+              - name: thumbnail
+                label: "Miniature personnalisée (optionnel)"
+                widget: string
+                required: false
+                hint: "Laissez vide pour utiliser la miniature automatique (YouTube/Drive)."
+              - name: type
+                label: Type
+                widget: select
+                options:
+                  - Cours
+                  - Conférence
+                  - Événement
+                  - Présentation
+                  - Autre
+              - { name: date,  label: Date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+              - { name: actif, label: Actif, widget: boolean, default: true }
+
+  # ── Formations ──────────────────────────────────────────────────
+  - name: formations
+    label: Formations
+    files:
+      - name: formations_list
+        label: Formations
+        file: src/data/formations.json
+        format: json
+        fields:
+          - name: items
+            label: Formations
+            widget: list
+            summary: "{{fields.nom}} — {{fields.niveau}}"
+            fields:
+              - { name: nom,         label: Nom,          widget: string }
+              - { name: description, label: Description,  widget: text }
+              - name: niveau
+                label: Niveau
+                widget: select
+                options:
+                  - Licence 3
+                  - Licence Pro
+                  - Master 1
+                  - Master 2
+                  - Doctorat
+              - { name: duree,  label: Durée,           widget: string, required: false }
+              - { name: places, label: "Nombre de places", widget: string, required: false }
+              - { name: actif,  label: Actif, widget: boolean, default: true }
+
+  # ── Partenaires ─────────────────────────────────────────────────
+  - name: partenaires
+    label: Partenaires
+    files:
+      - name: partenaires_list
+        label: Partenaires
+        file: src/data/partenaires.json
+        format: json
+        fields:
+          - name: items
+            label: Partenaires
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { name: nom,  label: Nom,  widget: string }
+              - { name: type, label: Type, widget: string, hint: "ex: Entreprise, Institution, Université…" }
+              - { name: logo, label: "Logo (URL)",      widget: string, required: false }
+              - { name: site, label: "Site web (URL)",  widget: string, required: false }
+              - { name: actif, label: Actif, widget: boolean, default: true }
+
+  # ── Membres ─────────────────────────────────────────────────────
+  - name: membres
+    label: Membres
+    files:
+      - name: membres_list
+        label: Membres du laboratoire
+        file: src/data/membres.json
+        format: json
+        fields:
+          - name: items
+            label: Membres
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { name: nom,       label: Nom,       widget: string }
+              - { name: role,      label: "Bureau (ex: R+1 · Bureau 120)", widget: string, required: false }
+              - { name: email,     label: Email,     widget: string, required: false }
+              - { name: specialite, label: Téléphone, widget: string, required: false }
+              - name: photo
+                label: "Photo (URL)"
+                widget: string
+                required: false
+                hint: "URL directe ou lien Google Drive (partage public)."
+              - { name: actif, label: Actif, widget: boolean, default: true }

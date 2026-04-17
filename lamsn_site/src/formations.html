@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations — LaMSN</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lamsn-blue-dark':   '#293358',
+            'lamsn-blue-medium': '#354878',
+            'lamsn-blue-light':  '#478ac9',
+            'lamsn-gray-light':  '#f5f5f5',
+            'lamsn-gray-medium': '#666666',
+            'lamsn-gray-dark':   '#333333',
+          },
+          fontFamily: { serif: ['Merriweather', 'serif'] },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white antialiased no-hero">
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<header id="main-header">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="header-logos">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <img src="data/logo_recent.png" alt="LaMSN" class="header-logo-lamsn" />
+          <div class="hidden sm:block">
+            <span class="font-serif font-bold text-lg lg:text-xl nav-text transition-colors">LaMSN</span>
+            <span class="block text-xs nav-text transition-colors opacity-75">La Maison des Sciences Numériques</span>
+          </div>
+        </a>
+        <div class="header-logo-sep hidden sm:block"></div>
+        <a href="https://www.univ-spn.fr" target="_blank" rel="noopener noreferrer" class="hidden sm:block">
+          <img src="data/Logo-USPN.png" alt="Université Sorbonne Paris Nord" class="header-logo-uspn" />
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Accueil
+        </a>
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            À Propos
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown single">
+            <a href="a-propos.html#mission"><span class="dd-title">Mission &amp; Vision</span></a>
+            <a href="a-propos.html#gouvernance"><span class="dd-title">Gouvernance</span></a>
+            <a href="a-propos.html#membres"><span class="dd-title">Nos Membres</span></a>
+          </div>
+        </div>
+        <div class="nav-has-dropdown">
+          <button class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">
+            Excellence
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="a-propos.html#ethique"><span class="dd-dot" style="background:#00a8e8"></span><span class="dd-title">Confiance &amp; Éthique</span></a>
+            <a href="a-propos.html#sante"><span class="dd-dot" style="background:#e63946"></span><span class="dd-title">Santé &amp; Numérique</span></a>
+            <a href="a-propos.html#cybersecurite"><span class="dd-dot" style="background:#2a9d8f"></span><span class="dd-title">Cybersécurité</span></a>
+            <a href="a-propos.html#arts"><span class="dd-dot" style="background:#f4a261"></span><span class="dd-title">Arts Numériques</span></a>
+            <a href="a-propos.html#fintech"><span class="dd-dot" style="background:#e9c46a"></span><span class="dd-title">FinTechs</span></a>
+            <a href="a-propos.html#humanities"><span class="dd-dot" style="background:#9b5de5"></span><span class="dd-title">e-Humanities</span></a>
+            <a href="a-propos.html#cynotechnie"><span class="dd-dot" style="background:#f15bb5"></span><span class="dd-title">Cynotechnie</span></a>
+          </div>
+        </div>
+        <a href="formations.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10" style="color:#478ac9;font-weight:600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Formations
+        </a>
+        <a href="entreprises.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Entreprises</a>
+        <a href="actualites.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Actualités</a>
+        <a href="contact.html" class="nav-text flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-white/10">Contact</a>
+      </nav>
+      <div class="hidden lg:block">
+        <a href="#catalogue" class="flex items-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
+          Voir le catalogue
+        </a>
+      </div>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md" style="color:#293358" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<div id="mobile-drawer" class="mobile-drawer">
+  <div class="flex items-center justify-between pb-4 border-b mb-4">
+    <div class="flex items-center gap-3">
+      <img src="data/logo_recent.png" alt="LaMSN" class="h-9 w-auto" />
+      <span class="font-serif font-bold text-lamsn-blue-dark">LaMSN</span>
+    </div>
+    <button id="mobile-close-btn" class="p-1.5 rounded-md hover:bg-gray-100 text-lamsn-gray-dark" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="mobile-nav-link">Accueil</a>
+  <a href="a-propos.html" class="mobile-nav-link">À Propos</a>
+  <a href="formations.html" class="mobile-nav-link" style="color:#478ac9;font-weight:600">Formations</a>
+  <a href="entreprises.html" class="mobile-nav-link">Entreprises</a>
+  <a href="actualites.html" class="mobile-nav-link">Actualités</a>
+  <a href="contact.html" class="mobile-nav-link">Contact</a>
+</div>
+
+<main id="main-content">
+
+<!-- Page Hero -->
+<section class="relative py-20 lg:py-28 gradient-lamsn overflow-hidden">
+  <div class="absolute inset-0 hero-grid-overlay"></div>
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-white text-xs font-medium border mb-6" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)">Nos Formations</span>
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Catalogue des Formations</h1>
+    <p class="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.82)">
+      Plus de 30 formations du DUT au Master, pour préparer les talents de demain aux métiers du numérique.
+    </p>
+  </div>
+</section>
+
+<!-- ── Catalogue ── -->
+<section id="catalogue" class="py-20 lg:py-32 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Stats -->
+    <div class="animate-on-scroll grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-lamsn-gray-light rounded-xl p-4 text-center">
+        <div class="text-2xl font-serif font-bold text-lamsn-blue-dark">30+</div>
+        <div class="text-sm text-lamsn-gray-medium">Formations</div>
+      </div>
+      <div class="bg-lamsn-gray-light rounded-xl p-4 text-center">
+        <div class="text-2xl font-serif font-bold text-lamsn-blue-dark">4</div>
+        <div class="text-sm text-lamsn-gray-medium">Niveaux</div>
+      </div>
+      <div class="bg-lamsn-gray-light rounded-xl p-4 text-center">
+        <div class="text-2xl font-serif font-bold text-lamsn-blue-dark">7</div>
+        <div class="text-sm text-lamsn-gray-medium">Domaines</div>
+      </div>
+      <div class="bg-lamsn-gray-light rounded-xl p-4 text-center">
+        <div class="text-2xl font-serif font-bold text-lamsn-blue-dark">95%</div>
+        <div class="text-sm text-lamsn-gray-medium">Insertion</div>
+      </div>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="animate-on-scroll delay-400 flex flex-wrap gap-2 mb-8">
+      <button class="tab-btn active" data-level="all">Toutes</button>
+      <button class="tab-btn" data-level="dut">DUT (Bac+2)</button>
+      <button class="tab-btn" data-level="licence">Licence Pro (Bac+3)</button>
+      <button class="tab-btn" data-level="master">Master (Bac+5)</button>
+      <button class="tab-btn" data-level="ingenieur">Ingénieur (Bac+5)</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="cms-formations-grid">
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="master">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 text-purple-700">Master — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Exploration Informatique des Données et Décisionnel (EID2)</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Formation spécialisée en data science, machine learning et aide à la décision.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="master">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 text-purple-700">Master — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Informatique Biomédicale</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Expertise en systèmes d'information de santé et technologies médicales.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="master">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 text-purple-700">Master — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Ingénierie et Innovation en Images et Réseaux</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Spécialisation en traitement d'images et réseaux de communication.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="master">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-purple-100 text-purple-700">Master — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Design d'Interface Multimédia et Internet</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Création et conception d'expériences utilisateur digitales.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="ingenieur">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">Ingénieur — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Ingénieur Informatique</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Formation d'ingénieur généraliste en informatique.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="ingenieur">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">Ingénieur — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Mathématiques Appliquées et Calcul Scientifique</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Modélisation mathématique et simulation numérique.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="ingenieur">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">Ingénieur — Bac+5</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Télécommunications et Réseaux</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Conception et gestion des infrastructures de communication.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="licence">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-100 text-blue-700">Licence Pro — Bac+3</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Administration et Sécurité des Réseaux (ASUR)</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Spécialisation en administration système et sécurité réseau.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="licence">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-blue-100 text-blue-700">Licence Pro — Bac+3</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Conception, Rédaction et Réalisation Web</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Développement web et création de contenus numériques.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="dut">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-green-100 text-green-700">DUT — Bac+2</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">DUT Informatique</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Formation fondamentale en développement et systèmes informatiques.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="dut">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-green-100 text-green-700">DUT — Bac+2</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Métiers du Multimédia et de l'Internet (MMI)</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Création multimédia, webdesign et communication digitale.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+      <div class="formation-card card-hover border border-gray-200 rounded-xl p-6 bg-white shadow-sm" data-level="dut">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-green-100 text-green-700">DUT — Bac+2</span>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-lamsn-blue-dark mb-2 line-clamp-2">Réseaux et Télécommunications</h3>
+        <p class="text-sm text-lamsn-gray-medium leading-relaxed mb-4">Infrastructure réseau et systèmes de communication.</p>
+        <span class="text-sm font-medium text-lamsn-blue-light">Détails de la formation →</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION — FORMATION EN LIGNE
+     ══════════════════════════════════════════════════════════ -->
+<section id="en-ligne" class="py-20 lg:py-32 bg-lamsn-gray-light">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="animate-on-scroll inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-lamsn-blue-light text-xs font-semibold uppercase tracking-wider mb-4 border border-lamsn-blue-light/30 bg-blue-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Disponible 24/7
+      </span>
+      <h2 class="animate-on-scroll delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-lamsn-blue-dark mb-6">Formations en Ligne</h2>
+      <p class="animate-on-scroll delay-200 text-lg text-lamsn-gray-medium leading-relaxed">
+        En partenariat avec <strong class="text-lamsn-blue-dark">Google Ateliers Numériques</strong>, LaMSN vous propose
+        des certifications professionnelles 100&nbsp;% en ligne, sans frais et sans expérience préalable requise.
+      </p>
+    </div>
+
+    <!-- Partnership banner -->
+    <div class="animate-on-scroll delay-300 grid lg:grid-cols-2 gap-10 items-center mb-16">
+
+      <!-- Left: description -->
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <img src="Formation en ligne_files/google_colob_-removebg-preview.png"
+               alt="Google Career Certificates"
+               class="h-16 w-auto object-contain"
+               onerror="this.style.display='none'" />
+          <div>
+            <h3 class="font-serif text-xl font-bold text-lamsn-blue-dark">Google Career Certificates</h3>
+            <p class="text-sm text-lamsn-gray-medium">En partenariat avec LaMSN × Google Ateliers Numériques</p>
+          </div>
+        </div>
+        <p class="text-lamsn-gray-dark leading-relaxed mb-6">
+          Dans la continuité de son partenariat stratégique avec <strong>Google Ateliers Numériques</strong>,
+          LaMSN — La Maison des Sciences Numériques de l'Université Sorbonne Paris Nord — vous offre
+          l'accès au programme <strong>Google Career Certificates</strong> : cinq certifications professionnelles
+          de haut niveau, conçues par Google, disponibles 100&nbsp;% en ligne, entre 110 et 200 heures
+          de contenu par certificat.
+        </p>
+        <a href="http://goo.gle/gccfrance" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          S'inscrire au webinaire de présentation
+        </a>
+        <p class="text-xs text-lamsn-gray-medium mt-3 italic">
+          Lors de l'inscription, sélectionner : <em>"Université Sorbonne Paris Nord — LaMSN × Google Career Certificates France"</em>
+        </p>
+      </div>
+
+      <!-- Right: photo slideshow -->
+      <div class="animate-on-scroll delay-400">
+        <div class="google-slideshow shadow-xl">
+          <div class="g-slide active">
+            <img src="Formation en ligne_files/gog.jpg" alt="Atelier Google LaMSN" />
+          </div>
+          <div class="g-slide">
+            <img src="Formation en ligne_files/gogo.jpg" alt="Atelier Google participants" />
+          </div>
+          <div class="g-slide">
+            <img src="Formation en ligne_files/google fille.jpeg" alt="Formation en ligne" />
+          </div>
+          <div class="g-slide">
+            <img src="Formation en ligne_files/2018.jpg" alt="Session 2018" />
+          </div>
+        </div>
+        <div class="google-slide-nav mt-3">
+          <button class="google-slide-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="google-slide-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="google-slide-dot" data-slide="2" aria-label="Slide 3"></button>
+          <button class="google-slide-dot" data-slide="3" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Certificates grid -->
+    <h3 class="animate-on-scroll font-serif text-2xl font-bold text-lamsn-blue-dark mb-6 text-center">Les 5 Certificats Disponibles</h3>
+    <div class="animate-on-scroll delay-200 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-14">
+
+      <div class="gcert-card">
+        <div class="gcert-icon" style="background:rgba(66,133,244,0.12)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-lamsn-blue-dark mb-1">Analyse de données</div>
+          <div class="text-xs text-lamsn-gray-medium">110–200 h · Sans prérequis</div>
+        </div>
+      </div>
+
+      <div class="gcert-card">
+        <div class="gcert-icon" style="background:rgba(52,168,83,0.12)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-lamsn-blue-dark mb-1">Management de projet</div>
+          <div class="text-xs text-lamsn-gray-medium">110–200 h · Sans prérequis</div>
+        </div>
+      </div>
+
+      <div class="gcert-card">
+        <div class="gcert-icon" style="background:rgba(234,67,53,0.12)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EA4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-lamsn-blue-dark mb-1">Cybersécurité</div>
+          <div class="text-xs text-lamsn-gray-medium">110–200 h · Sans prérequis</div>
+        </div>
+      </div>
+
+      <div class="gcert-card">
+        <div class="gcert-icon" style="background:rgba(251,188,5,0.15)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FBBC05" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-lamsn-blue-dark mb-1">Design UX</div>
+          <div class="text-xs text-lamsn-gray-medium">110–200 h · Sans prérequis</div>
+        </div>
+      </div>
+
+      <div class="gcert-card">
+        <div class="gcert-icon" style="background:rgba(71,138,201,0.12)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#478ac9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-lamsn-blue-dark mb-1">Support informatique</div>
+          <div class="text-xs text-lamsn-gray-medium">110–200 h · Sans prérequis</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA banner -->
+    <div class="animate-on-scroll delay-400">
+      <div class="relative gradient-lamsn rounded-2xl p-8 lg:p-12 overflow-hidden text-center">
+        <div class="absolute top-0 right-0 w-72 h-72 rounded-full -translate-y-1/2 translate-x-1/2" style="background:rgba(255,255,255,0.05)"></div>
+        <div class="relative z-10">
+          <p class="font-serif text-xl sm:text-2xl font-semibold text-white mb-2">
+            Ne manquez pas cette opportunité unique.
+          </p>
+          <p class="text-base mb-6" style="color:rgba(255,255,255,0.8)">Renforcez votre CV en moins de six mois — sans frais, sans expérience préalable requise.</p>
+          <a href="http://goo.gle/gccfrance" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-white text-lamsn-blue-dark hover:bg-white/90 font-bold px-8 py-4 rounded-xl transition-colors text-base">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            S'inscrire sur goo.gle/gccfrance
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script>
+// Google slideshow
+(function() {
+  const slides = document.querySelectorAll('.g-slide');
+  const dots = document.querySelectorAll('.google-slide-dot');
+  if (!slides.length) return;
+  let current = 0, timer;
+
+  function showSlide(i) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = i;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { showSlide((current + 1) % slides.length); }
+
+  timer = setInterval(next, 3500);
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      showSlide(parseInt(dot.getAttribute('data-slide')));
+      timer = setInterval(next, 3500);
+    });
+  });
+  document.querySelector('.google-slideshow').addEventListener('mouseenter', () => clearInterval(timer));
+  document.querySelector('.google-slideshow').addEventListener('mouseleave', () => { timer = setInterval(next, 3500); });
+})();
+</script>
+
+</main>
+
+<footer class="bg-lamsn-blue-dark text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="data/logo_recent.png" alt="LaMSN" class="h-10 w-auto" style="filter:brightness(0) invert(1)" />
+        <div>
+          <span class="font-serif font-bold text-lg">LaMSN</span>
+          <span class="block text-xs" style="color:rgba(255,255,255,0.55)">La Maison des Sciences Numériques</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-6 text-sm" style="color:rgba(255,255,255,0.65)">
+        <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+        <a href="a-propos.html" class="hover:text-white transition-colors">À Propos</a>
+        <a href="entreprises.html" class="hover:text-white transition-colors">Entreprises</a>
+        <a href="actualites.html" class="hover:text-white transition-colors">Actualités</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+    <div class="border-t mt-8 pt-6 flex items-center justify-between text-sm" style="border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.45)">
+      <span>&copy; <span id="copyright-year"></span> LaMSN — Université Sorbonne Paris Nord. Tous droits réservés.</span>
+      <a href="/admin/" class="footer-admin-link" title="Administration">·</a>
+    </div>
+  </div>
+</footer>
+
+<button id="chatbot-toggle" aria-label="Ouvrir le chat">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div id="chatbot-window">
+  <div class="flex items-center justify-between p-4 gradient-lamsn">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:rgba(255,255,255,0.2)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+      </div>
+      <div><h3 class="font-semibold text-white text-sm">Assistant LaMSN</h3><p class="text-xs" style="color:rgba(255,255,255,0.7)">En ligne</p></div>
+    </div>
+    <button id="chatbot-close" class="p-1.5 rounded-lg hover:bg-white/20 text-white" aria-label="Fermer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div id="chatbot-messages"></div>
+  <div class="p-4 border-t bg-white">
+    <div class="flex gap-2">
+      <input id="chatbot-input" type="text" placeholder="Posez votre question..." class="flex-1 px-4 py-2 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-lamsn-blue-light" />
+      <button id="chatbot-send" class="bg-lamsn-blue-light hover:bg-lamsn-blue-medium text-white p-2 rounded-lg" aria-label="Envoyer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script src="cms.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
